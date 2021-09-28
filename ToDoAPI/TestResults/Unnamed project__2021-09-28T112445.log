@@ -1,0 +1,646 @@
+﻿2021-09-28T11:24:45.7440138-03:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2021-09-28T11:24:45.7441267-03:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.9.7 in Framework netcore31 in x64 mode execution started
+2021-09-28T11:24:45.7441284-03:00;VSTestExecutionThread;Info;TestAdapter Location: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2021-09-28T11:24:45.7456336-03:00;VSTestExecutionThread;Info;Current UserName: 'Marco Lopes', MachineName: 'JUNIOR-DESKTOP'
+2021-09-28T11:24:45.7685894-03:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-28T11:24:45.7687466-03:00;VSTestExecutionThread;Info;Output folder configured to "D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults" (default)
+2021-09-28T11:24:45.7687864-03:00;VSTestExecutionThread;Info;Profile: 
+2021-09-28T11:24:45.7963146-03:00;VSTestExecutionThread;Info;Log file path: D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults\Unnamed project__2021-09-28T112445.log
+2021-09-28T11:24:45.7994770-03:00;Thread#12;Info;Checking activation
+2021-09-28T11:24:45.8595427-03:00;Thread#12;Info;Activated.
+2021-09-28T11:24:45.8597470-03:00;Thread#12;Info;Activation check completed
+2021-09-28T11:24:45.8598009-03:00;Thread#12;Info;Starting test run
+2021-09-28T11:24:45.9088895-03:00;Thread#12;Info;Discovering target: Default
+2021-09-28T11:24:45.9089959-03:00;Thread#12;Info;Discovering tests from assembly: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-28T11:24:45.9614009-03:00;Thread#12;Info;Discovered tests from assembly: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-28T11:24:45.9620488-03:00:Test Suite Dump
+2021-09-28T11:24:45.9630078-03:00:#0: Unnamed project/ - 
+2021-09-28T11:24:45.9630183-03:00:#1: Default - 
+2021-09-28T11:24:45.9630234-03:00:#2: SpecFlowToDoWeb - 
+2021-09-28T11:24:45.9630258-03:00:#3: ToDoController - 
+2021-09-28T11:24:45.9630267-03:00:#5: ToDoControllerCreateInvalidName - 
+2021-09-28T11:24:45.9630279-03:00:#7: ToDoControllerDelete - 
+2021-09-28T11:24:45.9630287-03:00:#9: ToDoControllerDeleteInvalidId - 
+2021-09-28T11:24:45.9630296-03:00:#11: ToDoControllerRead - 
+2021-09-28T11:24:45.9630309-03:00:#13: ToDoControllerUpdate - 
+2021-09-28T11:24:45.9630318-03:00:#15: ToDoControllerUpdateInvalidId - 
+2021-09-28T11:24:45.9630327-03:00:#17: ToDoWeb - 
+2021-09-28T11:24:45.9636679-03:00:#4: create a ToDo object in memory (or database) - TestAssembly:SpecFlowToDoWeb/Feature:ToDoController/Scenario:create+a+ToDo+object+in+memory+(or+database)
+2021-09-28T11:24:45.9636944-03:00:#6: Add an object without a valid name - TestAssembly:SpecFlowToDoWeb/Feature:ToDoControllerCreateInvalidName/Scenario:Add+an+object+without+a+valid+name
+2021-09-28T11:24:45.9636996-03:00:#8: delete a ToDo Object - TestAssembly:SpecFlowToDoWeb/Feature:ToDoControllerDelete/Scenario:delete+a+ToDo+Object
+2021-09-28T11:24:45.9637043-03:00:#10: Add two numbers - TestAssembly:SpecFlowToDoWeb/Feature:ToDoControllerDeleteInvalidId/Scenario:Add+two+numbers
+2021-09-28T11:24:45.9637142-03:00:#12: Add two numbers - TestAssembly:SpecFlowToDoWeb/Feature:ToDoControllerRead/Scenario:Add+two+numbers
+2021-09-28T11:24:45.9637180-03:00:#14: Add two numbers - TestAssembly:SpecFlowToDoWeb/Feature:ToDoControllerUpdate/Scenario:Add+two+numbers
+2021-09-28T11:24:45.9637226-03:00:#16: Add two numbers - TestAssembly:SpecFlowToDoWeb/Feature:ToDoControllerUpdateInvalidId/Scenario:Add+two+numbers
+2021-09-28T11:24:45.9637320-03:00:#18: Create an object ToDo - TestAssembly:SpecFlowToDoWeb/Feature:ToDoWeb/Scenario:Create+an+object+ToDo
+2021-09-28T11:24:45.9637630-03:00:End: Test Suite Dump
+2021-09-28T11:24:45.9736422-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:45.9747797-03:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2021-09-28T11:24:45.9748187-03:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2021-09-28T11:24:45.9768107-03:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:45.9768174-03:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:45.9768187-03:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:45.9768211-03:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2021-09-28T11:24:45.9772611-03:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2021-09-28T11:24:45.9780247-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:45.9794097-03:00:Thread #0: creating new test thread executor for SpecFlowToDoWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2021-09-28T11:24:45.9809874-03:00:Thread #0: Creating test assembly executor for execution model OutProc
+2021-09-28T11:24:45.9811141-03:00:Thread #0: Creating test assembly executor for execution model OutProc
+2021-09-28T11:24:45.9824872-03:00:Thread #0: using TechTalk.SpecRun.Framework.Execution.OutOfProc.StreamJsonRPC.OutOfProcessTestAssemblyExecutorHost to execute tests
+2021-09-28T11:24:45.9835526-03:00:starting Out Of Process Executor
+2021-09-28T11:24:45.9845424-03:00:Assembly resolving Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:45.9862168-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' from .deps.json file
+2021-09-28T11:24:45.9862288-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Validation' from .deps.json
+2021-09-28T11:24:45.9869567-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:45.9872039-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll'
+2021-09-28T11:24:45.9872734-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Validation.exe'
+2021-09-28T11:24:45.9872895-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Validation' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:45.9874286-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-28T11:24:45.9878009-03:00:Tfm: netcoreapp3.1
+2021-09-28T11:24:45.9878081-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:45.9878097-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll'
+2021-09-28T11:24:45.9878382-03:00:[AssemblyCache] Found file 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll' for assembly 'Microsoft.VisualStudio.Validation'
+2021-09-28T11:24:45.9881937-03:00:[AssemblyCache] Resolved 'Microsoft.VisualStudio.Validation' to D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll
+2021-09-28T11:24:45.9886079-03:00:Starting callback TCP Rpc server
+2021-09-28T11:24:45.9996835-03:00:Asynchronously starting background TCP Rpc Server on port 32768
+2021-09-28T11:24:45.9997132-03:00:Started callback TCP Rpc server on port 32768
+2021-09-28T11:24:45.9997143-03:00:Starting logger TCP Rpc server
+2021-09-28T11:24:46.0015806-03:00:Asynchronously starting background TCP Rpc Server on port 32769
+2021-09-28T11:24:46.0015929-03:00:Started logger TCP Rpc server on port 32769
+2021-09-28T11:24:46.0582693-03:00:Executing test executor at 'dotnet' 'exec "D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.anycpu.netcoreapp3_1.dll" --remoteRunnerPid 33528 --uniqueId "2021-09-28T112445" --outputFolder "D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults" --callbackPort 32768 --loggerPort 32769' in 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:46.0641561-03:00:Executor with PID 12496 has been started successfully.
+2021-09-28T11:24:46.0661664-03:00:Out of Process Executor 12496 started
+2021-09-28T11:24:46.0661757-03:00:Waiting for endpoint
+2021-09-28T11:24:46.2732480-03:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=pt-BR, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:46.2732644-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' from .deps.json file
+2021-09-28T11:24:46.2732666-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' from .deps.json
+2021-09-28T11:24:46.2732684-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:46.2732710-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\StreamJsonRpc.resources.dll'
+2021-09-28T11:24:46.2732931-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\StreamJsonRpc.resources.exe'
+2021-09-28T11:24:46.2733058-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:46.2733077-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-28T11:24:46.2733291-03:00:Tfm: netcoreapp3.1
+2021-09-28T11:24:46.2733310-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:46.2733320-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\StreamJsonRpc.resources.dll'
+2021-09-28T11:24:46.2733510-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\StreamJsonRpc.resources.exe'
+2021-09-28T11:24:46.2733906-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:46.2778295-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-28T11:24:46.2778418-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\StreamJsonRpc.resources.dll'
+2021-09-28T11:24:46.2778839-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\StreamJsonRpc.resources.exe'
+2021-09-28T11:24:46.2779119-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-28T11:24:46.2780075-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-28T11:24:46.2780109-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\StreamJsonRpc.resources.dll'
+2021-09-28T11:24:46.2780418-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\StreamJsonRpc.resources.exe'
+2021-09-28T11:24:46.2780635-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-28T11:24:46.2781523-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-28T11:24:46.2781553-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\StreamJsonRpc.resources.dll'
+2021-09-28T11:24:46.2782024-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\StreamJsonRpc.resources.exe'
+2021-09-28T11:24:46.2782272-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-28T11:24:46.2787762-03:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=pt, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:46.2791181-03:00:Assembly resolving Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:46.2791237-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' from .deps.json file
+2021-09-28T11:24:46.2791256-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Threading' from .deps.json
+2021-09-28T11:24:46.2791272-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:46.2791329-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll'
+2021-09-28T11:24:46.2791468-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Threading.exe'
+2021-09-28T11:24:46.2791590-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Threading' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:46.2791607-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-28T11:24:46.2791703-03:00:Tfm: netcoreapp3.1
+2021-09-28T11:24:46.2791719-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:46.2791765-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll'
+2021-09-28T11:24:46.2791868-03:00:[AssemblyCache] Found file 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll' for assembly 'Microsoft.VisualStudio.Threading'
+2021-09-28T11:24:46.2794779-03:00:[AssemblyCache] Resolved 'Microsoft.VisualStudio.Threading' to D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll
+2021-09-28T11:24:46.4347610-03:00:Remote executor port received: 32770
+2021-09-28T11:24:46.4349808-03:00:Creating executor TCP client on port 32770
+2021-09-28T11:24:46.4352485-03:00:Created executor TCP client on port 32770
+2021-09-28T11:24:46.4352528-03:00:Connecting to remote executor TCP server
+2021-09-28T11:24:46.4359408-03:00:Connected remote executor TCP server
+2021-09-28T11:24:46.4360379-03:00:trying to connect to Out of Process Executor the 1 attempt
+2021-09-28T11:24:46.4360474-03:00:Connection to Out of Process Executor established in the 1 attempt
+2021-09-28T11:24:46.5335356-03:00:2021-09-28T11:24:46.5328317-03:00:OutOfProcessTestAssemblyExecutor: initialized for D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll on test thread #0
+2021-09-28T11:24:46.5365356-03:00:Endpoint 12496 started
+2021-09-28T11:24:46.5486395-03:00:2021-09-28T11:24:46.5483912-03:00:OutOfProcessTestAssemblyExecutor: running tests...
+2021-09-28T11:24:46.6317840-03:00:2021-09-28T11:24:46.6315145-03:00:Assembly resolving TechTalk.SpecFlow, Version=3.9.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2021-09-28T11:24:46.6338087-03:00:2021-09-28T11:24:46.6336300-03:00:[AssemblyCache] Trying to resolve 'TechTalk.SpecFlow' from .deps.json file
+2021-09-28T11:24:46.6356785-03:00:2021-09-28T11:24:46.6354912-03:00:[AssemblyCache] Resolved 'TechTalk.SpecFlow' to 'C:\Users\Marco Lopes\.nuget\packages\specflow\3.9.8\lib\netstandard2.0\TechTalk.SpecFlow.dll'
+2021-09-28T11:24:46.7057817-03:00:2021-09-28T11:24:46.7054909-03:00:Thread#0:T:-> Loading plugin D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-28T11:24:46.7065266-03:00:2021-09-28T11:24:46.7063894-03:00:Assembly resolving Microsoft.Extensions.DependencyModel, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-09-28T11:24:46.7066871-03:00:2021-09-28T11:24:46.7065997-03:00:[AssemblyCache] Trying to resolve 'Microsoft.Extensions.DependencyModel' from .deps.json file
+2021-09-28T11:24:46.7075188-03:00:2021-09-28T11:24:46.7068976-03:00:[AssemblyCache] Resolved 'Microsoft.Extensions.DependencyModel' to 'C:\Users\Marco Lopes\.nuget\packages\microsoft.extensions.dependencymodel\1.0.3\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll'
+2021-09-28T11:24:46.7345408-03:00:2021-09-28T11:24:46.7342458-03:00:Assembly resolving Microsoft.DotNet.PlatformAbstractions, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-09-28T11:24:46.7347921-03:00:2021-09-28T11:24:46.7347078-03:00:[AssemblyCache] Trying to resolve 'Microsoft.DotNet.PlatformAbstractions' from .deps.json file
+2021-09-28T11:24:46.7350635-03:00:2021-09-28T11:24:46.7349644-03:00:[AssemblyCache] Resolved 'Microsoft.DotNet.PlatformAbstractions' to 'C:\Users\Marco Lopes\.nuget\packages\microsoft.dotnet.platformabstractions\1.0.3\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll'
+2021-09-28T11:24:46.7401090-03:00:2021-09-28T11:24:46.7399222-03:00:Thread#0:T:-> Missing [assembly:RuntimePlugin] attribute in SpecFlowToDoWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null. Please check https://go.specflow.org/doc-plugins for details.
+2021-09-28T11:24:46.7404353-03:00:2021-09-28T11:24:46.7402963-03:00:Thread#0:T:-> Loading plugin D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+2021-09-28T11:24:46.7415749-03:00:2021-09-28T11:24:46.7414682-03:00:Assembly resolving LivingDoc.Dtos, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+2021-09-28T11:24:46.7417818-03:00:2021-09-28T11:24:46.7416581-03:00:[AssemblyCache] Trying to resolve 'LivingDoc.Dtos' from .deps.json file
+2021-09-28T11:24:46.7420821-03:00:2021-09-28T11:24:46.7419987-03:00:[AssemblyCache] Resolved 'LivingDoc.Dtos' to 'C:\Users\Marco Lopes\.nuget\packages\specflow.plus.livingdocplugin\3.9.5\lib\netstandard2.0\LivingDoc.Dtos.dll'
+2021-09-28T11:24:46.7435485-03:00:2021-09-28T11:24:46.7434103-03:00:Thread#0:T:-> Loading plugin D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecRun.Runtime.SpecFlowPlugin.dll
+2021-09-28T11:24:46.7482900-03:00:2021-09-28T11:24:46.7481401-03:00:Thread#0:T:-> Using default config
+2021-09-28T11:24:46.7548904-03:00:2021-09-28T11:24:46.7546559-03:00:Assembly resolving Cucumber.Messages, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b10c5988214f940c
+2021-09-28T11:24:46.7551467-03:00:2021-09-28T11:24:46.7550496-03:00:[AssemblyCache] Trying to resolve 'Cucumber.Messages' from .deps.json file
+2021-09-28T11:24:46.7555157-03:00:2021-09-28T11:24:46.7553333-03:00:[AssemblyCache] Resolved 'Cucumber.Messages' to 'C:\Users\Marco Lopes\.nuget\packages\cucumber.messages\6.0.1\lib\netstandard2.0\Cucumber.Messages.dll'
+2021-09-28T11:24:46.7563925-03:00:2021-09-28T11:24:46.7562409-03:00:Assembly resolving Google.Protobuf, Version=3.7.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604
+2021-09-28T11:24:46.7567140-03:00:2021-09-28T11:24:46.7565911-03:00:[AssemblyCache] Trying to resolve 'Google.Protobuf' from .deps.json file
+2021-09-28T11:24:46.7570083-03:00:2021-09-28T11:24:46.7568910-03:00:[AssemblyCache] Resolved 'Google.Protobuf' to 'C:\Users\Marco Lopes\.nuget\packages\google.protobuf\3.7.0\lib\netstandard1.0\Google.Protobuf.dll'
+2021-09-28T11:24:46.7644424-03:00:2021-09-28T11:24:46.7642077-03:00:Assembly resolving Microsoft.VisualStudio.TestPlatform.ObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:46.7646836-03:00:2021-09-28T11:24:46.7645986-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.TestPlatform.ObjectModel' from .deps.json file
+2021-09-28T11:24:46.7650700-03:00:2021-09-28T11:24:46.7649718-03:00:[AssemblyCache] Resolved 'Microsoft.VisualStudio.TestPlatform.ObjectModel' to 'C:\Users\Marco Lopes\.nuget\packages\microsoft.testplatform.objectmodel\16.5.0\lib\netstandard2.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll'
+2021-09-28T11:24:46.7843115-03:00:2021-09-28T11:24:46.7840532-03:00:Assembly resolving SpecFlow.Internal.Json, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2021-09-28T11:24:46.7846213-03:00:2021-09-28T11:24:46.7845055-03:00:[AssemblyCache] Trying to resolve 'SpecFlow.Internal.Json' from .deps.json file
+2021-09-28T11:24:46.7849263-03:00:2021-09-28T11:24:46.7848218-03:00:[AssemblyCache] Resolved 'SpecFlow.Internal.Json' to 'C:\Users\Marco Lopes\.nuget\packages\specflow.internal.json\1.0.8\lib\netstandard2.0\SpecFlow.Internal.Json.dll'
+2021-09-28T11:24:46.8296193-03:00:Thread#0: Test #4/0 is started on thread #0
+2021-09-28T11:24:46.8414588-03:00:2021-09-28T11:24:46.8411724-03:00:Thread#0:B:Given a user has entered information about ToDo novo nome
+2021-09-28T11:24:46.8501276-03:00:2021-09-28T11:24:46.8499097-03:00:Assembly resolving ToDoWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2021-09-28T11:24:46.8503505-03:00:2021-09-28T11:24:46.8502689-03:00:[AssemblyCache] Trying to resolve 'ToDoWeb' from .deps.json file
+2021-09-28T11:24:46.8509290-03:00:2021-09-28T11:24:46.8508215-03:00:[DependencyContextAssemblyCache.ResolveManagedAssembly] Resolving 'ToDoWeb', found in dependency map, but unable to resolve a path in ['ToDoWeb.dll']
+2021-09-28T11:24:46.8510954-03:00:2021-09-28T11:24:46.8510171-03:00:[AssemblyCache] Could not resolve 'ToDoWeb' from .deps.json
+2021-09-28T11:24:46.8522416-03:00:2021-09-28T11:24:46.8520811-03:00:[AssemblyCache] Trying to resolve 'ToDoWeb' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:46.8542598-03:00:2021-09-28T11:24:46.8541343-03:00:[AssemblyCache] Trying to resolve 'ToDoWeb' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\ToDoWeb.dll'
+2021-09-28T11:24:46.8544702-03:00:2021-09-28T11:24:46.8543828-03:00:[AssemblyCache] Found file 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\ToDoWeb.dll' for assembly 'ToDoWeb'
+2021-09-28T11:24:46.8549462-03:00:2021-09-28T11:24:46.8548494-03:00:[AssemblyCache] Resolved 'ToDoWeb' to D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\ToDoWeb.dll
+2021-09-28T11:24:46.8585213-03:00:2021-09-28T11:24:46.8583987-03:00:Thread#0:T:done: ToDoControllerStepDefinition.GivenAUserHasEnteredInformationAboutAToDo("novo nome") (0,0s)
+2021-09-28T11:24:46.8597749-03:00:2021-09-28T11:24:46.8596115-03:00:Thread#0:B:Given it gives more information about ToDo descriptionaaa
+2021-09-28T11:24:46.8606590-03:00:2021-09-28T11:24:46.8605464-03:00:Thread#0:T:done: ToDoControllerStepDefinition.GivenMoreInformation("descriptionaaa") (0,0s)
+2021-09-28T11:24:46.8611363-03:00:2021-09-28T11:24:46.8610088-03:00:Thread#0:B:Then that ToDo should be stored in the system
+2021-09-28T11:24:46.8619575-03:00:2021-09-28T11:24:46.8618472-03:00:Assembly resolving RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75
+2021-09-28T11:24:46.8621372-03:00:2021-09-28T11:24:46.8620395-03:00:[AssemblyCache] Trying to resolve 'RestSharp' from .deps.json file
+2021-09-28T11:24:46.8624417-03:00:2021-09-28T11:24:46.8623298-03:00:[AssemblyCache] Resolved 'RestSharp' to 'C:\Users\Marco Lopes\.nuget\packages\restsharp\106.12.0\lib\netstandard2.0\RestSharp.dll'
+2021-09-28T11:24:47.8222198-03:00:2021-09-28T11:24:47.8210376-03:00:Thread#0:T:done: ToDoControllerStepDefinition.ThenThatToDoShouldBeStoredInTheSystem() (1,0s)
+2021-09-28T11:24:47.8236944-03:00:2021-09-28T11:24:47.8231299-03:00:Thread#0:B:Then the response should be OK
+2021-09-28T11:24:47.8254960-03:00:2021-09-28T11:24:47.8249309-03:00:Assembly resolving FluentAssertions, Version=5.10.3.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a
+2021-09-28T11:24:47.8264327-03:00:2021-09-28T11:24:47.8259321-03:00:[AssemblyCache] Trying to resolve 'FluentAssertions' from .deps.json file
+2021-09-28T11:24:47.8274691-03:00:2021-09-28T11:24:47.8269801-03:00:[AssemblyCache] Resolved 'FluentAssertions' to 'C:\Users\Marco Lopes\.nuget\packages\fluentassertions\5.10.3\lib\netcoreapp2.1\FluentAssertions.dll'
+2021-09-28T11:24:47.9843572-03:00:2021-09-28T11:24:47.9837059-03:00:Thread#0:T:done: ToDoControllerStepDefinition.GivenModelStateIsCorrect("OK") (0,2s)
+2021-09-28T11:24:47.9921748-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:47.9922376-03:00:Thread#:Scheduler: testitem #6 from normal test queue 
+2021-09-28T11:24:47.9922415-03:00:Thread#0:Scheduler: considering testitem #6 for thread 0
+2021-09-28T11:24:47.9922950-03:00:Thread#0:TestItem#6:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:47.9922978-03:00:Thread#0:TestItem#6:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:47.9922991-03:00:Thread#0:TestItem#6:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:47.9923005-03:00:Thread#0:Scheduler: using testitem #6 for thread 0
+2021-09-28T11:24:47.9923247-03:00:Thread#0:Scheduler: Test #6 is scheduled for thread
+2021-09-28T11:24:47.9923484-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.0211522-03:00:Thread#0: Test #4/0 is finished on thread #0 as Succeeded within 1,1909221 seconds
+2021-09-28T11:24:48.0226095-03:00:Thread#0: Test #6/0 is started on thread #0
+2021-09-28T11:24:48.0241201-03:00:2021-09-28T11:24:48.0239860-03:00:Thread#0:B:Given the prop ToDo Id 8
+2021-09-28T11:24:48.0255942-03:00:2021-09-28T11:24:48.0255082-03:00:Thread#0:T:done: ToDoControllerCreateInvalidNameStepsDefinition.GivenThePropToDoId(8) (0,0s)
+2021-09-28T11:24:48.0259150-03:00:2021-09-28T11:24:48.0257198-03:00:Thread#0:B:Then the prop Description "Nova descrição"
+2021-09-28T11:24:48.0265256-03:00:2021-09-28T11:24:48.0264204-03:00:Thread#0:T:done: ToDoControllerCreateInvalidNameStepsDefinition.ThenThePropDescription("Nova descrição") (0,0s)
+2021-09-28T11:24:48.0267185-03:00:2021-09-28T11:24:48.0266338-03:00:Thread#0:B:Then the system try to save the object
+2021-09-28T11:24:48.0336628-03:00:2021-09-28T11:24:48.0334652-03:00:Assembly resolving System.Net.Requests.resources, Version=4.1.2.0, Culture=pt-BR, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:48.0338843-03:00:2021-09-28T11:24:48.0338054-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' from .deps.json file
+2021-09-28T11:24:48.0340670-03:00:2021-09-28T11:24:48.0339601-03:00:[AssemblyCache] Could not resolve 'System.Net.Requests.resources' from .deps.json
+2021-09-28T11:24:48.0342810-03:00:2021-09-28T11:24:48.0341391-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:48.0344504-03:00:2021-09-28T11:24:48.0343657-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\System.Net.Requests.resources.dll'
+2021-09-28T11:24:48.0346498-03:00:2021-09-28T11:24:48.0345558-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\System.Net.Requests.resources.exe'
+2021-09-28T11:24:48.0348609-03:00:2021-09-28T11:24:48.0347697-03:00:[AssemblyCache] Could not resolve 'System.Net.Requests.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:48.0352097-03:00:2021-09-28T11:24:48.0351228-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-28T11:24:48.0356405-03:00:2021-09-28T11:24:48.0355489-03:00:Tfm: netcoreapp3.1
+2021-09-28T11:24:48.0357910-03:00:2021-09-28T11:24:48.0357128-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:48.0359704-03:00:2021-09-28T11:24:48.0358697-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\System.Net.Requests.resources.dll'
+2021-09-28T11:24:48.0361708-03:00:2021-09-28T11:24:48.0360696-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\System.Net.Requests.resources.exe'
+2021-09-28T11:24:48.0363470-03:00:2021-09-28T11:24:48.0362496-03:00:[AssemblyCache] Could not resolve 'System.Net.Requests.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:48.0406287-03:00:2021-09-28T11:24:48.0405155-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-28T11:24:48.0408368-03:00:2021-09-28T11:24:48.0407468-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\System.Net.Requests.resources.dll'
+2021-09-28T11:24:48.0410585-03:00:2021-09-28T11:24:48.0409626-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\System.Net.Requests.resources.exe'
+2021-09-28T11:24:48.0412700-03:00:2021-09-28T11:24:48.0411628-03:00:[AssemblyCache] Could not resolve 'System.Net.Requests.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-28T11:24:48.0415444-03:00:2021-09-28T11:24:48.0414525-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-28T11:24:48.0417051-03:00:2021-09-28T11:24:48.0416090-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\System.Net.Requests.resources.dll'
+2021-09-28T11:24:48.0419314-03:00:2021-09-28T11:24:48.0418397-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\System.Net.Requests.resources.exe'
+2021-09-28T11:24:48.0421385-03:00:2021-09-28T11:24:48.0420407-03:00:[AssemblyCache] Could not resolve 'System.Net.Requests.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-28T11:24:48.0424151-03:00:2021-09-28T11:24:48.0423253-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-28T11:24:48.0425658-03:00:2021-09-28T11:24:48.0424877-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\System.Net.Requests.resources.dll'
+2021-09-28T11:24:48.0428218-03:00:2021-09-28T11:24:48.0427211-03:00:[AssemblyCache] Trying to resolve 'System.Net.Requests.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\System.Net.Requests.resources.exe'
+2021-09-28T11:24:48.0430317-03:00:2021-09-28T11:24:48.0429381-03:00:[AssemblyCache] Could not resolve 'System.Net.Requests.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-28T11:24:48.0437040-03:00:2021-09-28T11:24:48.0436047-03:00:Assembly resolving System.Net.Requests.resources, Version=4.1.2.0, Culture=pt, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:48.0445253-03:00:2021-09-28T11:24:48.0444186-03:00:Thread#0:T:done: ToDoControllerCreateInvalidNameStepsDefinition.ThenTheSystemTryToStoredTheObjectInTheSystem() (0,0s)
+2021-09-28T11:24:48.0447668-03:00:2021-09-28T11:24:48.0446730-03:00:Thread#0:B:Then the error response should be Bad Request
+2021-09-28T11:24:48.0454835-03:00:2021-09-28T11:24:48.0453838-03:00:Thread#0:T:done: ToDoControllerCreateInvalidNameStepsDefinition.ThenTheErrorResponseShouldBeBadRequest("Bad Request") (0,0s)
+2021-09-28T11:24:48.0460589-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.0460770-03:00:Thread#:Scheduler: testitem #8 from normal test queue 
+2021-09-28T11:24:48.0460789-03:00:Thread#0:Scheduler: considering testitem #8 for thread 0
+2021-09-28T11:24:48.0461009-03:00:Thread#0:TestItem#8:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:48.0461026-03:00:Thread#0:TestItem#8:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:48.0461039-03:00:Thread#0:TestItem#8:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:48.0461050-03:00:Thread#0:Scheduler: using testitem #8 for thread 0
+2021-09-28T11:24:48.0461142-03:00:Thread#0:Scheduler: Test #8 is scheduled for thread
+2021-09-28T11:24:48.0461193-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.0479563-03:00:Thread#0: Test #6/0 is finished on thread #0 as Succeeded within 0,0253145 seconds
+2021-09-28T11:24:48.0482261-03:00:Thread#0: Test #8/0 is started on thread #0
+2021-09-28T11:24:48.0531089-03:00:2021-09-28T11:24:48.0529815-03:00:Thread#0:B:Given a creation of an object ToDo
+2021-09-28T11:24:48.0533287-03:00:2021-09-28T11:24:48.0532131-03:00:Thread#0:B:  --- table step argument ---
+2021-09-28T11:24:48.0535157-03:00:2021-09-28T11:24:48.0534200-03:00:Thread#0:B:  | Field        | Value                    |
+2021-09-28T11:24:48.0536906-03:00:2021-09-28T11:24:48.0535868-03:00:Thread#0:B:  | Id           | 20                       |
+2021-09-28T11:24:48.0538720-03:00:2021-09-28T11:24:48.0537689-03:00:Thread#0:B:  | ToDoName     | objeto ToDo              |
+2021-09-28T11:24:48.0540225-03:00:2021-09-28T11:24:48.0539525-03:00:Thread#0:B:  | Description  | descrição do objeto ToDo |
+2021-09-28T11:24:48.0541626-03:00:2021-09-28T11:24:48.0540918-03:00:Thread#0:B:  | CreationDate | 2021/09/20               |
+2021-09-28T11:24:48.0732568-03:00:2021-09-28T11:24:48.0730384-03:00:Thread#0:T:done: ToDoControllerDeleteSteps.GivenACreationOfAnObjectToDo(<table>) (0,0s)
+2021-09-28T11:24:48.0737128-03:00:2021-09-28T11:24:48.0736289-03:00:Thread#0:B:And when user send a delete requisition within an id 20
+2021-09-28T11:24:48.0742618-03:00:2021-09-28T11:24:48.0741820-03:00:Thread#0:T:done: ToDoControllerDeleteSteps.GivenWhenUserSendADeleteRequisitionWithinAnId(20) (0,0s)
+2021-09-28T11:24:48.0744353-03:00:2021-09-28T11:24:48.0743580-03:00:Thread#0:B:Then the system execute the requisition
+2021-09-28T11:24:48.0795256-03:00:2021-09-28T11:24:48.0793334-03:00:Thread#0:T:done: ToDoControllerDeleteSteps.ThenTheSystemExecuteTheRequisition() (0,0s)
+2021-09-28T11:24:48.0798131-03:00:2021-09-28T11:24:48.0796927-03:00:Thread#0:B:Then the system should respond with OK
+2021-09-28T11:24:48.0804256-03:00:2021-09-28T11:24:48.0803398-03:00:Thread#0:T:done: ToDoControllerDeleteSteps.ThenTheSystemShouldRespond("OK") (0,0s)
+2021-09-28T11:24:48.0808791-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.0808877-03:00:Thread#:Scheduler: testitem #10 from normal test queue 
+2021-09-28T11:24:48.0808896-03:00:Thread#0:Scheduler: considering testitem #10 for thread 0
+2021-09-28T11:24:48.0809037-03:00:Thread#0:TestItem#10:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:48.0809058-03:00:Thread#0:TestItem#10:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:48.0809071-03:00:Thread#0:TestItem#10:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:48.0809086-03:00:Thread#0:Scheduler: using testitem #10 for thread 0
+2021-09-28T11:24:48.0809176-03:00:Thread#0:Scheduler: Test #10 is scheduled for thread
+2021-09-28T11:24:48.0809264-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.0823432-03:00:Thread#0: Test #8/0 is finished on thread #0 as Succeeded within 0,0341032 seconds
+2021-09-28T11:24:48.0825702-03:00:Thread#0: Test #10/0 is started on thread #0
+2021-09-28T11:24:48.0837650-03:00:2021-09-28T11:24:48.0836307-03:00:Thread#0:B:Given the first number is 50
+2021-09-28T11:24:48.0914163-03:00:2021-09-28T11:24:48.0912189-03:00:Assembly resolving Gherkin, Version=19.0.3.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851
+2021-09-28T11:24:48.0916078-03:00:2021-09-28T11:24:48.0915331-03:00:[AssemblyCache] Trying to resolve 'Gherkin' from .deps.json file
+2021-09-28T11:24:48.0919773-03:00:2021-09-28T11:24:48.0918247-03:00:[AssemblyCache] Resolved 'Gherkin' to 'C:\Users\Marco Lopes\.nuget\packages\gherkin\19.0.3\lib\netstandard2.0\Gherkin.dll'
+2021-09-28T11:24:48.1116200-03:00:2021-09-28T11:24:48.1113435-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.1118535-03:00:2021-09-28T11:24:48.1117736-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.1120006-03:00:2021-09-28T11:24:48.1119234-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.1121919-03:00:2021-09-28T11:24:48.1120695-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1124074-03:00:2021-09-28T11:24:48.1123010-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1125519-03:00:2021-09-28T11:24:48.1124762-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1131283-03:00:2021-09-28T11:24:48.1130457-03:00:Thread#0:B:And the second number is 70
+2021-09-28T11:24:48.1172641-03:00:2021-09-28T11:24:48.1171447-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.1174761-03:00:2021-09-28T11:24:48.1173683-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.1176520-03:00:2021-09-28T11:24:48.1175646-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.1178324-03:00:2021-09-28T11:24:48.1177328-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1180162-03:00:2021-09-28T11:24:48.1179208-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1181798-03:00:2021-09-28T11:24:48.1181022-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1185722-03:00:2021-09-28T11:24:48.1184869-03:00:Thread#0:B:When the two numbers are added
+2021-09-28T11:24:48.1267517-03:00:2021-09-28T11:24:48.1265848-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.1269475-03:00:2021-09-28T11:24:48.1268667-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.1271459-03:00:2021-09-28T11:24:48.1270145-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.1273243-03:00:2021-09-28T11:24:48.1272451-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1274655-03:00:2021-09-28T11:24:48.1273830-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1276096-03:00:2021-09-28T11:24:48.1275340-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1278511-03:00:2021-09-28T11:24:48.1277683-03:00:Thread#0:B:Then the result should be 120
+2021-09-28T11:24:48.1316321-03:00:2021-09-28T11:24:48.1315295-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.1318150-03:00:2021-09-28T11:24:48.1317094-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.1319759-03:00:2021-09-28T11:24:48.1318893-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.1321173-03:00:2021-09-28T11:24:48.1320392-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1322732-03:00:2021-09-28T11:24:48.1321855-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1324222-03:00:2021-09-28T11:24:48.1323432-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1845912-03:00:2021-09-28T11:24:48.1843149-03:00:Thread#0:T:Pending: No matching step definition found for one or more steps.
+2021-09-28T11:24:48.1848220-03:00:2021-09-28T11:24:48.1847431-03:00:Thread#0:T:using System;
+2021-09-28T11:24:48.1849769-03:00:2021-09-28T11:24:48.1849005-03:00:Thread#0:T:using TechTalk.SpecFlow;
+2021-09-28T11:24:48.1851195-03:00:2021-09-28T11:24:48.1850444-03:00:Thread#0:T:namespace MyNamespace
+2021-09-28T11:24:48.1853226-03:00:2021-09-28T11:24:48.1852075-03:00:Thread#0:T:{
+2021-09-28T11:24:48.1854692-03:00:2021-09-28T11:24:48.1853918-03:00:Thread#0:T:    [Binding]
+2021-09-28T11:24:48.1856145-03:00:2021-09-28T11:24:48.1855394-03:00:Thread#0:T:    public class StepDefinitions
+2021-09-28T11:24:48.1857582-03:00:2021-09-28T11:24:48.1856796-03:00:Thread#0:T:    {
+2021-09-28T11:24:48.1859730-03:00:2021-09-28T11:24:48.1858410-03:00:Thread#0:T:        private readonly ScenarioContext _scenarioContext;
+2021-09-28T11:24:48.1861702-03:00:2021-09-28T11:24:48.1860699-03:00:Thread#0:T:        public StepDefinitions(ScenarioContext scenarioContext)
+2021-09-28T11:24:48.1863467-03:00:2021-09-28T11:24:48.1862558-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1865216-03:00:2021-09-28T11:24:48.1864229-03:00:Thread#0:T:            _scenarioContext = scenarioContext;
+2021-09-28T11:24:48.1867116-03:00:2021-09-28T11:24:48.1866160-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1868781-03:00:2021-09-28T11:24:48.1867840-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.1870226-03:00:2021-09-28T11:24:48.1869456-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.1872139-03:00:2021-09-28T11:24:48.1870897-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1873721-03:00:2021-09-28T11:24:48.1872920-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1875341-03:00:2021-09-28T11:24:48.1874533-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1876856-03:00:2021-09-28T11:24:48.1876085-03:00:Thread#0:T:        
+2021-09-28T11:24:48.1878560-03:00:2021-09-28T11:24:48.1877661-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.1880291-03:00:2021-09-28T11:24:48.1879444-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.1881676-03:00:2021-09-28T11:24:48.1880925-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1883003-03:00:2021-09-28T11:24:48.1882314-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1884275-03:00:2021-09-28T11:24:48.1883608-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1885746-03:00:2021-09-28T11:24:48.1884955-03:00:Thread#0:T:        
+2021-09-28T11:24:48.1887214-03:00:2021-09-28T11:24:48.1886412-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.1888828-03:00:2021-09-28T11:24:48.1887907-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.1890356-03:00:2021-09-28T11:24:48.1889554-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1892079-03:00:2021-09-28T11:24:48.1891034-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1893582-03:00:2021-09-28T11:24:48.1892765-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1894913-03:00:2021-09-28T11:24:48.1894199-03:00:Thread#0:T:        
+2021-09-28T11:24:48.1896197-03:00:2021-09-28T11:24:48.1895485-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.1897653-03:00:2021-09-28T11:24:48.1896808-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.1898893-03:00:2021-09-28T11:24:48.1898201-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.1900388-03:00:2021-09-28T11:24:48.1899590-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.1901631-03:00:2021-09-28T11:24:48.1900934-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.1903461-03:00:2021-09-28T11:24:48.1902561-03:00:Thread#0:T:    }
+2021-09-28T11:24:48.1905116-03:00:2021-09-28T11:24:48.1904151-03:00:Thread#0:T:}
+2021-09-28T11:24:48.1909113-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.1909198-03:00:Thread#:Scheduler: testitem #12 from normal test queue 
+2021-09-28T11:24:48.1909215-03:00:Thread#0:Scheduler: considering testitem #12 for thread 0
+2021-09-28T11:24:48.1909359-03:00:Thread#0:TestItem#12:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:48.1909376-03:00:Thread#0:TestItem#12:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:48.1909430-03:00:Thread#0:TestItem#12:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:48.1909443-03:00:Thread#0:Scheduler: using testitem #12 for thread 0
+2021-09-28T11:24:48.1909541-03:00:Thread#0:Scheduler: Test #12 is scheduled for thread
+2021-09-28T11:24:48.1909602-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.1923538-03:00:Thread#0: Test #10/0 is finished on thread #0 as Pending within 0,1097709 seconds
+2021-09-28T11:24:48.1925623-03:00:Thread#0: Test #12/0 is started on thread #0
+2021-09-28T11:24:48.1938505-03:00:2021-09-28T11:24:48.1937386-03:00:Thread#0:B:Given the first number is 50
+2021-09-28T11:24:48.2015013-03:00:2021-09-28T11:24:48.2012665-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2017520-03:00:2021-09-28T11:24:48.2016246-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.2019635-03:00:2021-09-28T11:24:48.2018621-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.2021320-03:00:2021-09-28T11:24:48.2020452-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2022968-03:00:2021-09-28T11:24:48.2022154-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2024470-03:00:2021-09-28T11:24:48.2023714-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2026890-03:00:2021-09-28T11:24:48.2026062-03:00:Thread#0:B:And the second number is 70
+2021-09-28T11:24:48.2063537-03:00:2021-09-28T11:24:48.2062654-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2065449-03:00:2021-09-28T11:24:48.2064403-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.2067479-03:00:2021-09-28T11:24:48.2066410-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.2069305-03:00:2021-09-28T11:24:48.2068283-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2071235-03:00:2021-09-28T11:24:48.2070321-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2072987-03:00:2021-09-28T11:24:48.2071937-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2075560-03:00:2021-09-28T11:24:48.2074551-03:00:Thread#0:B:When the two numbers are added
+2021-09-28T11:24:48.2116376-03:00:2021-09-28T11:24:48.2112223-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2122402-03:00:2021-09-28T11:24:48.2119079-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.2127182-03:00:2021-09-28T11:24:48.2124596-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.2131676-03:00:2021-09-28T11:24:48.2129264-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2136631-03:00:2021-09-28T11:24:48.2134080-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2141026-03:00:2021-09-28T11:24:48.2138636-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2147154-03:00:2021-09-28T11:24:48.2143649-03:00:Thread#0:B:Then the result should be 120
+2021-09-28T11:24:48.2187859-03:00:2021-09-28T11:24:48.2185499-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2189981-03:00:2021-09-28T11:24:48.2188807-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.2191586-03:00:2021-09-28T11:24:48.2190794-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.2193358-03:00:2021-09-28T11:24:48.2192450-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2194988-03:00:2021-09-28T11:24:48.2194194-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2196545-03:00:2021-09-28T11:24:48.2195682-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2502609-03:00:2021-09-28T11:24:48.2499804-03:00:Thread#0:T:Pending: No matching step definition found for one or more steps.
+2021-09-28T11:24:48.2505368-03:00:2021-09-28T11:24:48.2504147-03:00:Thread#0:T:using System;
+2021-09-28T11:24:48.2506838-03:00:2021-09-28T11:24:48.2506011-03:00:Thread#0:T:using TechTalk.SpecFlow;
+2021-09-28T11:24:48.2508283-03:00:2021-09-28T11:24:48.2507590-03:00:Thread#0:T:namespace MyNamespace
+2021-09-28T11:24:48.2510217-03:00:2021-09-28T11:24:48.2508937-03:00:Thread#0:T:{
+2021-09-28T11:24:48.2511967-03:00:2021-09-28T11:24:48.2511050-03:00:Thread#0:T:    [Binding]
+2021-09-28T11:24:48.2513517-03:00:2021-09-28T11:24:48.2512731-03:00:Thread#0:T:    public class StepDefinitions
+2021-09-28T11:24:48.2514786-03:00:2021-09-28T11:24:48.2514102-03:00:Thread#0:T:    {
+2021-09-28T11:24:48.2516338-03:00:2021-09-28T11:24:48.2515530-03:00:Thread#0:T:        private readonly ScenarioContext _scenarioContext;
+2021-09-28T11:24:48.2517577-03:00:2021-09-28T11:24:48.2516912-03:00:Thread#0:T:        public StepDefinitions(ScenarioContext scenarioContext)
+2021-09-28T11:24:48.2519130-03:00:2021-09-28T11:24:48.2518321-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2520654-03:00:2021-09-28T11:24:48.2519692-03:00:Thread#0:T:            _scenarioContext = scenarioContext;
+2021-09-28T11:24:48.2522267-03:00:2021-09-28T11:24:48.2521343-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2523871-03:00:2021-09-28T11:24:48.2523033-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.2525437-03:00:2021-09-28T11:24:48.2524571-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.2526984-03:00:2021-09-28T11:24:48.2526181-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2528333-03:00:2021-09-28T11:24:48.2527648-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2529743-03:00:2021-09-28T11:24:48.2528919-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2531250-03:00:2021-09-28T11:24:48.2530466-03:00:Thread#0:T:        
+2021-09-28T11:24:48.2532855-03:00:2021-09-28T11:24:48.2531983-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.2534424-03:00:2021-09-28T11:24:48.2533573-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.2535924-03:00:2021-09-28T11:24:48.2535169-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2537381-03:00:2021-09-28T11:24:48.2536642-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2538785-03:00:2021-09-28T11:24:48.2538054-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2540253-03:00:2021-09-28T11:24:48.2539506-03:00:Thread#0:T:        
+2021-09-28T11:24:48.2541779-03:00:2021-09-28T11:24:48.2540925-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.2543258-03:00:2021-09-28T11:24:48.2542383-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.2544833-03:00:2021-09-28T11:24:48.2543913-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2546379-03:00:2021-09-28T11:24:48.2545605-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2547644-03:00:2021-09-28T11:24:48.2546965-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2549047-03:00:2021-09-28T11:24:48.2548271-03:00:Thread#0:T:        
+2021-09-28T11:24:48.2550495-03:00:2021-09-28T11:24:48.2549709-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.2552109-03:00:2021-09-28T11:24:48.2551245-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.2553762-03:00:2021-09-28T11:24:48.2552830-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2555236-03:00:2021-09-28T11:24:48.2554470-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2556622-03:00:2021-09-28T11:24:48.2555814-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2558311-03:00:2021-09-28T11:24:48.2557424-03:00:Thread#0:T:    }
+2021-09-28T11:24:48.2559810-03:00:2021-09-28T11:24:48.2558970-03:00:Thread#0:T:}
+2021-09-28T11:24:48.2565146-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.2565369-03:00:Thread#:Scheduler: testitem #14 from normal test queue 
+2021-09-28T11:24:48.2565392-03:00:Thread#0:Scheduler: considering testitem #14 for thread 0
+2021-09-28T11:24:48.2565793-03:00:Thread#0:TestItem#14:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:48.2565826-03:00:Thread#0:TestItem#14:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:48.2565880-03:00:Thread#0:TestItem#14:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:48.2565892-03:00:Thread#0:Scheduler: using testitem #14 for thread 0
+2021-09-28T11:24:48.2566142-03:00:Thread#0:Scheduler: Test #14 is scheduled for thread
+2021-09-28T11:24:48.2566380-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.2581506-03:00:Thread#0: Test #12/0 is finished on thread #0 as Pending within 0,0655466 seconds
+2021-09-28T11:24:48.2584006-03:00:Thread#0: Test #14/0 is started on thread #0
+2021-09-28T11:24:48.2596663-03:00:2021-09-28T11:24:48.2595562-03:00:Thread#0:B:Given the first number is 50
+2021-09-28T11:24:48.2634249-03:00:2021-09-28T11:24:48.2633071-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2636342-03:00:2021-09-28T11:24:48.2635238-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.2638226-03:00:2021-09-28T11:24:48.2637091-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.2639945-03:00:2021-09-28T11:24:48.2639091-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2641301-03:00:2021-09-28T11:24:48.2640547-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2642772-03:00:2021-09-28T11:24:48.2641953-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2644785-03:00:2021-09-28T11:24:48.2643973-03:00:Thread#0:B:And the second number is 70
+2021-09-28T11:24:48.2682230-03:00:2021-09-28T11:24:48.2681141-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2683804-03:00:2021-09-28T11:24:48.2683032-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.2685368-03:00:2021-09-28T11:24:48.2684497-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.2686790-03:00:2021-09-28T11:24:48.2686047-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2688272-03:00:2021-09-28T11:24:48.2687516-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2689710-03:00:2021-09-28T11:24:48.2688899-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2691649-03:00:2021-09-28T11:24:48.2690768-03:00:Thread#0:B:When the two numbers are added
+2021-09-28T11:24:48.2728927-03:00:2021-09-28T11:24:48.2727739-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2730807-03:00:2021-09-28T11:24:48.2729839-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.2732548-03:00:2021-09-28T11:24:48.2731538-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.2734540-03:00:2021-09-28T11:24:48.2733669-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2736138-03:00:2021-09-28T11:24:48.2735175-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2737727-03:00:2021-09-28T11:24:48.2736930-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.2739682-03:00:2021-09-28T11:24:48.2738856-03:00:Thread#0:B:Then the result should be 120
+2021-09-28T11:24:48.2787041-03:00:2021-09-28T11:24:48.2785859-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.2788897-03:00:2021-09-28T11:24:48.2787899-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.2790448-03:00:2021-09-28T11:24:48.2789640-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.2791972-03:00:2021-09-28T11:24:48.2791178-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.2793539-03:00:2021-09-28T11:24:48.2792746-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.2795176-03:00:2021-09-28T11:24:48.2794229-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3119926-03:00:2021-09-28T11:24:48.3117126-03:00:Thread#0:T:Pending: No matching step definition found for one or more steps.
+2021-09-28T11:24:48.3123336-03:00:2021-09-28T11:24:48.3121713-03:00:Thread#0:T:using System;
+2021-09-28T11:24:48.3125395-03:00:2021-09-28T11:24:48.3124433-03:00:Thread#0:T:using TechTalk.SpecFlow;
+2021-09-28T11:24:48.3126956-03:00:2021-09-28T11:24:48.3126082-03:00:Thread#0:T:namespace MyNamespace
+2021-09-28T11:24:48.3128510-03:00:2021-09-28T11:24:48.3127610-03:00:Thread#0:T:{
+2021-09-28T11:24:48.3130054-03:00:2021-09-28T11:24:48.3129190-03:00:Thread#0:T:    [Binding]
+2021-09-28T11:24:48.3131607-03:00:2021-09-28T11:24:48.3130758-03:00:Thread#0:T:    public class StepDefinitions
+2021-09-28T11:24:48.3133216-03:00:2021-09-28T11:24:48.3132300-03:00:Thread#0:T:    {
+2021-09-28T11:24:48.3134759-03:00:2021-09-28T11:24:48.3133876-03:00:Thread#0:T:        private readonly ScenarioContext _scenarioContext;
+2021-09-28T11:24:48.3136301-03:00:2021-09-28T11:24:48.3135406-03:00:Thread#0:T:        public StepDefinitions(ScenarioContext scenarioContext)
+2021-09-28T11:24:48.3137864-03:00:2021-09-28T11:24:48.3136982-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3139429-03:00:2021-09-28T11:24:48.3138512-03:00:Thread#0:T:            _scenarioContext = scenarioContext;
+2021-09-28T11:24:48.3140826-03:00:2021-09-28T11:24:48.3140064-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3142513-03:00:2021-09-28T11:24:48.3141555-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.3144100-03:00:2021-09-28T11:24:48.3143293-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.3145605-03:00:2021-09-28T11:24:48.3144847-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3147049-03:00:2021-09-28T11:24:48.3146260-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3148630-03:00:2021-09-28T11:24:48.3147735-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3150207-03:00:2021-09-28T11:24:48.3149326-03:00:Thread#0:T:        
+2021-09-28T11:24:48.3151723-03:00:2021-09-28T11:24:48.3150813-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.3153292-03:00:2021-09-28T11:24:48.3152461-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.3154825-03:00:2021-09-28T11:24:48.3154027-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3156344-03:00:2021-09-28T11:24:48.3155575-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3157758-03:00:2021-09-28T11:24:48.3157009-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3159204-03:00:2021-09-28T11:24:48.3158459-03:00:Thread#0:T:        
+2021-09-28T11:24:48.3160660-03:00:2021-09-28T11:24:48.3159867-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.3162236-03:00:2021-09-28T11:24:48.3161395-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.3163592-03:00:2021-09-28T11:24:48.3162804-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3165119-03:00:2021-09-28T11:24:48.3164320-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3166660-03:00:2021-09-28T11:24:48.3165814-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3167989-03:00:2021-09-28T11:24:48.3167301-03:00:Thread#0:T:        
+2021-09-28T11:24:48.3169297-03:00:2021-09-28T11:24:48.3168562-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.3170670-03:00:2021-09-28T11:24:48.3169939-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.3172193-03:00:2021-09-28T11:24:48.3171252-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3173899-03:00:2021-09-28T11:24:48.3172968-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3175450-03:00:2021-09-28T11:24:48.3174546-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3236247-03:00:2021-09-28T11:24:48.3176104-03:00:Thread#0:T:    }
+2021-09-28T11:24:48.3238637-03:00:2021-09-28T11:24:48.3237516-03:00:Thread#0:T:}
+2021-09-28T11:24:48.3242619-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.3242700-03:00:Thread#:Scheduler: testitem #16 from normal test queue 
+2021-09-28T11:24:48.3242718-03:00:Thread#0:Scheduler: considering testitem #16 for thread 0
+2021-09-28T11:24:48.3243087-03:00:Thread#0:TestItem#16:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:48.3243104-03:00:Thread#0:TestItem#16:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:48.3243117-03:00:Thread#0:TestItem#16:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:48.3243129-03:00:Thread#0:Scheduler: using testitem #16 for thread 0
+2021-09-28T11:24:48.3243208-03:00:Thread#0:Scheduler: Test #16 is scheduled for thread
+2021-09-28T11:24:48.3243260-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.3256790-03:00:Thread#0: Test #14/0 is finished on thread #0 as Pending within 0,0672523 seconds
+2021-09-28T11:24:48.3259046-03:00:Thread#0: Test #16/0 is started on thread #0
+2021-09-28T11:24:48.3272362-03:00:2021-09-28T11:24:48.3271166-03:00:Thread#0:B:Given the first number is 50
+2021-09-28T11:24:48.3311252-03:00:2021-09-28T11:24:48.3309736-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.3313020-03:00:2021-09-28T11:24:48.3312093-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.3314479-03:00:2021-09-28T11:24:48.3313690-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.3315886-03:00:2021-09-28T11:24:48.3315084-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3317203-03:00:2021-09-28T11:24:48.3316468-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3318572-03:00:2021-09-28T11:24:48.3317783-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3320513-03:00:2021-09-28T11:24:48.3319696-03:00:Thread#0:B:And the second number is 70
+2021-09-28T11:24:48.3358125-03:00:2021-09-28T11:24:48.3357040-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.3360182-03:00:2021-09-28T11:24:48.3358985-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.3361879-03:00:2021-09-28T11:24:48.3360953-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.3363455-03:00:2021-09-28T11:24:48.3362686-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3365454-03:00:2021-09-28T11:24:48.3364434-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3367286-03:00:2021-09-28T11:24:48.3366278-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3369633-03:00:2021-09-28T11:24:48.3368708-03:00:Thread#0:B:When the two numbers are added
+2021-09-28T11:24:48.3413603-03:00:2021-09-28T11:24:48.3412163-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.3415860-03:00:2021-09-28T11:24:48.3414629-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.3417573-03:00:2021-09-28T11:24:48.3416685-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.3419305-03:00:2021-09-28T11:24:48.3418452-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3420865-03:00:2021-09-28T11:24:48.3420031-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3422380-03:00:2021-09-28T11:24:48.3421541-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3424334-03:00:2021-09-28T11:24:48.3423546-03:00:Thread#0:B:Then the result should be 120
+2021-09-28T11:24:48.3461527-03:00:2021-09-28T11:24:48.3460662-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-28T11:24:48.3463136-03:00:2021-09-28T11:24:48.3462277-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.3464762-03:00:2021-09-28T11:24:48.3463830-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.3466777-03:00:2021-09-28T11:24:48.3465752-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3468455-03:00:2021-09-28T11:24:48.3467613-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3469960-03:00:2021-09-28T11:24:48.3469092-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3790668-03:00:2021-09-28T11:24:48.3788007-03:00:Thread#0:T:Pending: No matching step definition found for one or more steps.
+2021-09-28T11:24:48.3793033-03:00:2021-09-28T11:24:48.3792239-03:00:Thread#0:T:using System;
+2021-09-28T11:24:48.3795638-03:00:2021-09-28T11:24:48.3794345-03:00:Thread#0:T:using TechTalk.SpecFlow;
+2021-09-28T11:24:48.3797297-03:00:2021-09-28T11:24:48.3796407-03:00:Thread#0:T:namespace MyNamespace
+2021-09-28T11:24:48.3798736-03:00:2021-09-28T11:24:48.3797975-03:00:Thread#0:T:{
+2021-09-28T11:24:48.3800133-03:00:2021-09-28T11:24:48.3799430-03:00:Thread#0:T:    [Binding]
+2021-09-28T11:24:48.3801634-03:00:2021-09-28T11:24:48.3800786-03:00:Thread#0:T:    public class StepDefinitions
+2021-09-28T11:24:48.3803130-03:00:2021-09-28T11:24:48.3802306-03:00:Thread#0:T:    {
+2021-09-28T11:24:48.3804512-03:00:2021-09-28T11:24:48.3803722-03:00:Thread#0:T:        private readonly ScenarioContext _scenarioContext;
+2021-09-28T11:24:48.3806007-03:00:2021-09-28T11:24:48.3805219-03:00:Thread#0:T:        public StepDefinitions(ScenarioContext scenarioContext)
+2021-09-28T11:24:48.3807469-03:00:2021-09-28T11:24:48.3806684-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3808977-03:00:2021-09-28T11:24:48.3808053-03:00:Thread#0:T:            _scenarioContext = scenarioContext;
+2021-09-28T11:24:48.3810527-03:00:2021-09-28T11:24:48.3809725-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3812246-03:00:2021-09-28T11:24:48.3811303-03:00:Thread#0:T:        [Given(@"the first number is (.*)")]
+2021-09-28T11:24:48.3814043-03:00:2021-09-28T11:24:48.3813143-03:00:Thread#0:T:        public void GivenTheFirstNumberIs(int p0)
+2021-09-28T11:24:48.3815428-03:00:2021-09-28T11:24:48.3814731-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3816977-03:00:2021-09-28T11:24:48.3816085-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3818559-03:00:2021-09-28T11:24:48.3817684-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3820065-03:00:2021-09-28T11:24:48.3819209-03:00:Thread#0:T:        
+2021-09-28T11:24:48.3822490-03:00:2021-09-28T11:24:48.3820729-03:00:Thread#0:T:        [Given(@"the second number is (.*)")]
+2021-09-28T11:24:48.3823928-03:00:2021-09-28T11:24:48.3823170-03:00:Thread#0:T:        public void GivenTheSecondNumberIs(int p0)
+2021-09-28T11:24:48.3825378-03:00:2021-09-28T11:24:48.3824628-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3826801-03:00:2021-09-28T11:24:48.3826055-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3828250-03:00:2021-09-28T11:24:48.3827510-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3829629-03:00:2021-09-28T11:24:48.3828907-03:00:Thread#0:T:        
+2021-09-28T11:24:48.3831045-03:00:2021-09-28T11:24:48.3830286-03:00:Thread#0:T:        [When(@"the two numbers are added")]
+2021-09-28T11:24:48.3832866-03:00:2021-09-28T11:24:48.3831813-03:00:Thread#0:T:        public void WhenTheTwoNumbersAreAdded()
+2021-09-28T11:24:48.3843591-03:00:2021-09-28T11:24:48.3834943-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3853786-03:00:2021-09-28T11:24:48.3848647-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3862350-03:00:2021-09-28T11:24:48.3857873-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3870912-03:00:2021-09-28T11:24:48.3866760-03:00:Thread#0:T:        
+2021-09-28T11:24:48.3877446-03:00:2021-09-28T11:24:48.3873999-03:00:Thread#0:T:        [Then(@"the result should be (.*)")]
+2021-09-28T11:24:48.3884452-03:00:2021-09-28T11:24:48.3880427-03:00:Thread#0:T:        public void ThenTheResultShouldBe(int p0)
+2021-09-28T11:24:48.3890348-03:00:2021-09-28T11:24:48.3887355-03:00:Thread#0:T:        {
+2021-09-28T11:24:48.3895491-03:00:2021-09-28T11:24:48.3893219-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-28T11:24:48.3900092-03:00:2021-09-28T11:24:48.3897695-03:00:Thread#0:T:        }
+2021-09-28T11:24:48.3904734-03:00:2021-09-28T11:24:48.3902343-03:00:Thread#0:T:    }
+2021-09-28T11:24:48.3908725-03:00:2021-09-28T11:24:48.3906676-03:00:Thread#0:T:}
+2021-09-28T11:24:48.3917994-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.3918079-03:00:Thread#:Scheduler: testitem #18 from normal test queue 
+2021-09-28T11:24:48.3918098-03:00:Thread#0:Scheduler: considering testitem #18 for thread 0
+2021-09-28T11:24:48.3918250-03:00:Thread#0:TestItem#18:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-28T11:24:48.3918267-03:00:Thread#0:TestItem#18:runsOnOneOtherThreadSpecific:False
+2021-09-28T11:24:48.3918342-03:00:Thread#0:TestItem#18:runsOnOneOtherThreadUnspecific:False
+2021-09-28T11:24:48.3918353-03:00:Thread#0:Scheduler: using testitem #18 for thread 0
+2021-09-28T11:24:48.3918452-03:00:Thread#0:Scheduler: Test #18 is scheduled for thread
+2021-09-28T11:24:48.3918546-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-28T11:24:48.3948841-03:00:Thread#0: Test #16/0 is finished on thread #0 as Pending within 0,0689667 seconds
+2021-09-28T11:24:48.3954106-03:00:Thread#0: Test #18/0 is started on thread #0
+2021-09-28T11:24:48.3978423-03:00:2021-09-28T11:24:48.3976070-03:00:Thread#0:B:Given the first name is objeto ToDo
+2021-09-28T11:24:48.3994404-03:00:2021-09-28T11:24:48.3993415-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheNameIs("objeto ToDo") (0,0s)
+2021-09-28T11:24:48.3996907-03:00:2021-09-28T11:24:48.3996025-03:00:Thread#0:B:Given the description is descrição do objeto ToDo
+2021-09-28T11:24:48.4001872-03:00:2021-09-28T11:24:48.4001043-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheDescriptionIs("descrição do obje...") (0,0s)
+2021-09-28T11:24:48.4003584-03:00:2021-09-28T11:24:48.4002801-03:00:Thread#0:B:Given the unique id: 7
+2021-09-28T11:24:48.4008840-03:00:2021-09-28T11:24:48.4008023-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheId(7) (0,0s)
+2021-09-28T11:24:48.4010480-03:00:2021-09-28T11:24:48.4009724-03:00:Thread#0:B:Given the object creation date 2021/09/20
+2021-09-28T11:24:48.4015115-03:00:2021-09-28T11:24:48.4014298-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheDate("2021/09/20") (0,0s)
+2021-09-28T11:24:48.4017757-03:00:2021-09-28T11:24:48.4016541-03:00:Thread#0:B:Then get them all and you have your ToDo object
+2021-09-28T11:24:48.4019337-03:00:2021-09-28T11:24:48.4018530-03:00:Thread#0:B:  --- table step argument ---
+2021-09-28T11:24:48.4020958-03:00:2021-09-28T11:24:48.4020028-03:00:Thread#0:B:  | Field        | Value                    |
+2021-09-28T11:24:48.4022752-03:00:2021-09-28T11:24:48.4021723-03:00:Thread#0:B:  | Id           | 7                        |
+2021-09-28T11:24:48.4024249-03:00:2021-09-28T11:24:48.4023403-03:00:Thread#0:B:  | ToDoName     | objeto ToDo              |
+2021-09-28T11:24:48.4025814-03:00:2021-09-28T11:24:48.4024881-03:00:Thread#0:B:  | Description  | descrição do objeto ToDo |
+2021-09-28T11:24:48.4027364-03:00:2021-09-28T11:24:48.4026484-03:00:Thread#0:B:  | CreationDate | 2021/09/20               |
+2021-09-28T11:24:48.4042095-03:00:2021-09-28T11:24:48.4041108-03:00:Thread#0:T:done: ToDoStepDefinition.ThenGatherThemAll(<table>) (0,0s)
+2021-09-28T11:24:48.4046831-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-28T11:24:48.4046901-03:00:Thread#:Scheduler: at the end of normal test queue
+2021-09-28T11:24:48.4046916-03:00:Thread#0:Scheduler: enumerator for thread is at end
+2021-09-28T11:24:48.4046929-03:00:Thread#0:Scheduler: No more tests for thread
+2021-09-28T11:24:48.4066137-03:00:Thread#0: Test #18/0 is finished on thread #0 as Succeeded within 0,0111881 seconds
+2021-09-28T11:24:48.4105346-03:00:2021-09-28T11:24:48.4103996-03:00:Got Deinitialize Signal
+2021-09-28T11:24:48.4124809-03:00:RPC Client disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Stream has been disposed
+Exception:<none>
+2021-09-28T11:24:48.4128511-03:00:RPC Server disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Reached end of stream.
+Exception:<none>
+2021-09-28T11:24:48.4135445-03:00:RPC Server disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Reached end of stream.
+Exception:<none>
+2021-09-28T11:24:48.4149968-03:00:Assembly resolving System.Diagnostics.Process.resources, Version=4.2.2.0, Culture=pt-BR, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:48.4150102-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' from .deps.json file
+2021-09-28T11:24:48.4150150-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' from .deps.json
+2021-09-28T11:24:48.4150192-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:48.4150225-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\System.Diagnostics.Process.resources.dll'
+2021-09-28T11:24:48.4150490-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\System.Diagnostics.Process.resources.exe'
+2021-09-28T11:24:48.4150685-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-28T11:24:48.4150739-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-28T11:24:48.4151223-03:00:Tfm: netcoreapp3.1
+2021-09-28T11:24:48.4151280-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:48.4151347-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\System.Diagnostics.Process.resources.dll'
+2021-09-28T11:24:48.4151624-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\System.Diagnostics.Process.resources.exe'
+2021-09-28T11:24:48.4151893-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-28T11:24:48.4158248-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-28T11:24:48.4158314-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\System.Diagnostics.Process.resources.dll'
+2021-09-28T11:24:48.4158778-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\System.Diagnostics.Process.resources.exe'
+2021-09-28T11:24:48.4159182-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-28T11:24:48.4160368-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-28T11:24:48.4160432-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\System.Diagnostics.Process.resources.dll'
+2021-09-28T11:24:48.4160869-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\System.Diagnostics.Process.resources.exe'
+2021-09-28T11:24:48.4161255-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-28T11:24:48.4162676-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-28T11:24:48.4162738-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\System.Diagnostics.Process.resources.dll'
+2021-09-28T11:24:48.4163301-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\System.Diagnostics.Process.resources.exe'
+2021-09-28T11:24:48.4163707-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-28T11:24:48.4167156-03:00:Assembly resolving System.Diagnostics.Process.resources, Version=4.2.2.0, Culture=pt, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-28T11:24:48.4216228-03:00:Thread#-1:Scheduler: get next test for thread -1
+2021-09-28T11:24:48.4216310-03:00:Thread#:Scheduler: at the end of normal test queue
+2021-09-28T11:24:48.4216326-03:00:Thread#-1:Scheduler: enumerator for thread is at end
+2021-09-28T11:24:48.4226650-03:00;Thread#12;Info;test run finished
+2021-09-28T11:24:48.4227619-03:00;Thread#12;Info;publishing test results
+2021-09-28T11:24:48.4228364-03:00;Thread#12;Info;Not publishing results.
+2021-09-28T11:24:48.4228722-03:00;Thread#12;Info;test results published
+2021-09-28T11:24:48.4228908-03:00;Thread#12;Info;generating reports
+2021-09-28T11:24:48.4692714-03:00;Thread#12;Info;Starting external report generation process
+2021-09-28T11:24:49.2805671-03:00;Thread#12;Info;Successfully generated reports.
+2021-09-28T11:24:49.2818495-03:00;Thread#12;Info;Successfully generated reports
+2021-09-28T11:24:49.2859100-03:00:Total: 8
+2021-09-28T11:24:49.2869649-03:00:Succeeded: 4
+2021-09-28T11:24:49.2871426-03:00:Ignored: 0
+2021-09-28T11:24:49.2872847-03:00:Pending: 4
+2021-09-28T11:24:49.2872891-03:00:Skipped: 0
+2021-09-28T11:24:49.2874279-03:00:Failed: 0
+2021-09-28T11:24:49.2916096-03:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+2021-09-28T11:24:49.2916367-03:00;VSTestExecutionThread;Info;adding Test Execution Report 'D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults\Unnamed project__2021-09-28T112445.html'
+========== End of log file ==========

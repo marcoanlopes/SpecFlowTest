@@ -1,0 +1,10 @@
+﻿2021-09-28T11:41:21.0359483-03:00;Thread#1;Info;Reading test run result from Json file "C:\Users\Marco Lopes\AppData\Local\Temp\341ae870-234f-4ab6-9fe2-c878e66435b3".
+2021-09-28T11:41:21.0399491-03:00;Thread#1;Info;Successfully read test run result from Json file "C:\Users\Marco Lopes\AppData\Local\Temp\341ae870-234f-4ab6-9fe2-c878e66435b3"
+2021-09-28T11:41:21.0399491-03:00;Thread#1;Info;Deserializing test run result
+2021-09-28T11:41:21.1339703-03:00;Thread#1;Info;Successfully deserialized test run result
+2021-09-28T11:41:21.1339703-03:00;Thread#1;Info;Loading test run result
+2021-09-28T11:41:21.1449725-03:00;Thread#1;Info;Successfully loaded test run result
+2021-09-28T11:41:21.1509738-03:00;Thread#1;Info;creating 1 report(s)
+2021-09-28T11:41:21.1509738-03:00;Thread#1;Info;generate Report using template ReportTemplate.cshtml
+2021-09-28T11:41:21.6151810-03:00;Thread#1;Info;Finished generating reports.
+========== End of log file ==========

@@ -1,0 +1,274 @@
+﻿2021-09-20T17:49:34.6882202-03:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2021-09-20T17:49:34.6884304-03:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.9.7 in Framework netcore31 in x64 mode execution started
+2021-09-20T17:49:34.6884330-03:00;VSTestExecutionThread;Info;TestAdapter Location: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2021-09-20T17:49:34.6907607-03:00;VSTestExecutionThread;Info;Current UserName: 'Marco Lopes', MachineName: 'JUNIOR-DESKTOP'
+2021-09-20T17:49:34.7258138-03:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-20T17:49:34.7264202-03:00;VSTestExecutionThread;Info;Output folder configured to "D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults" (default)
+2021-09-20T17:49:34.7265666-03:00;VSTestExecutionThread;Info;Profile: 
+2021-09-20T17:49:34.7685354-03:00;VSTestExecutionThread;Info;Log file path: D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults\Unnamed project__2021-09-20T174934.log
+2021-09-20T17:49:34.7730079-03:00;Thread#12;Info;Checking activation
+2021-09-20T17:49:34.8565827-03:00;Thread#12;Info;Activated.
+2021-09-20T17:49:34.8567945-03:00;Thread#12;Info;Activation check completed
+2021-09-20T17:49:34.8569091-03:00;Thread#12;Info;Starting test run
+2021-09-20T17:49:34.9313381-03:00;Thread#12;Info;Discovering target: Default
+2021-09-20T17:49:34.9314703-03:00;Thread#12;Info;Discovering tests from assembly: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-20T17:49:35.0119693-03:00;Thread#12;Info;Discovered tests from assembly: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-20T17:49:35.0129350-03:00:Test Suite Dump
+2021-09-20T17:49:35.0144797-03:00:#0: Unnamed project/ - 
+2021-09-20T17:49:35.0144988-03:00:#1: Default - 
+2021-09-20T17:49:35.0145006-03:00:#2: SpecFlowToDoWeb - 
+2021-09-20T17:49:35.0145021-03:00:#3: Calculator - 
+2021-09-20T17:49:35.0145036-03:00:#5: ToDoWeb - 
+2021-09-20T17:49:35.0153257-03:00:#4: Add two numbers - TestAssembly:SpecFlowToDoWeb/Feature:Calculator/Scenario:Add+two+numbers
+2021-09-20T17:49:35.0153465-03:00:#6: Create an object ToDo - TestAssembly:SpecFlowToDoWeb/Feature:ToDoWeb/Scenario:Create+an+object+ToDo
+2021-09-20T17:49:35.0153807-03:00:End: Test Suite Dump
+2021-09-20T17:49:35.0318521-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-20T17:49:35.0335869-03:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2021-09-20T17:49:35.0336531-03:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2021-09-20T17:49:35.0360719-03:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-20T17:49:35.0360970-03:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2021-09-20T17:49:35.0360985-03:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2021-09-20T17:49:35.0361012-03:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2021-09-20T17:49:35.0365877-03:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2021-09-20T17:49:35.0374177-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-20T17:49:35.0389872-03:00:Thread #0: creating new test thread executor for SpecFlowToDoWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2021-09-20T17:49:35.0413300-03:00:Thread #0: Creating test assembly executor for execution model OutProc
+2021-09-20T17:49:35.0414887-03:00:Thread #0: Creating test assembly executor for execution model OutProc
+2021-09-20T17:49:35.0431125-03:00:Thread #0: using TechTalk.SpecRun.Framework.Execution.OutOfProc.StreamJsonRPC.OutOfProcessTestAssemblyExecutorHost to execute tests
+2021-09-20T17:49:35.0445711-03:00:starting Out Of Process Executor
+2021-09-20T17:49:35.0464373-03:00:Assembly resolving Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:35.0489636-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' from .deps.json file
+2021-09-20T17:49:35.0489831-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Validation' from .deps.json
+2021-09-20T17:49:35.0497898-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.0500796-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll'
+2021-09-20T17:49:35.0501788-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Validation.exe'
+2021-09-20T17:49:35.0501969-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Validation' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.0503452-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-20T17:49:35.0507390-03:00:Tfm: netcoreapp3.1
+2021-09-20T17:49:35.0507464-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-20T17:49:35.0507475-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Validation' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll'
+2021-09-20T17:49:35.0507719-03:00:[AssemblyCache] Found file 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll' for assembly 'Microsoft.VisualStudio.Validation'
+2021-09-20T17:49:35.0511825-03:00:[AssemblyCache] Resolved 'Microsoft.VisualStudio.Validation' to D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll
+2021-09-20T17:49:35.0519526-03:00:Starting callback TCP Rpc server
+2021-09-20T17:49:35.0729635-03:00:Asynchronously starting background TCP Rpc Server on port 32768
+2021-09-20T17:49:35.0730359-03:00:Started callback TCP Rpc server on port 32768
+2021-09-20T17:49:35.0730382-03:00:Starting logger TCP Rpc server
+2021-09-20T17:49:35.0770438-03:00:Asynchronously starting background TCP Rpc Server on port 32769
+2021-09-20T17:49:35.0770739-03:00:Started logger TCP Rpc server on port 32769
+2021-09-20T17:49:35.1581203-03:00:Executing test executor at 'dotnet' 'exec "D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\TechTalk.SpecRun.Framework.Executor.anycpu.netcoreapp3_1.dll" --remoteRunnerPid 24476 --uniqueId "2021-09-20T174934" --outputFolder "D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults" --callbackPort 32768 --loggerPort 32769' in 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.1661293-03:00:Executor with PID 8564 has been started successfully.
+2021-09-20T17:49:35.1684662-03:00:Out of Process Executor 8564 started
+2021-09-20T17:49:35.1684805-03:00:Waiting for endpoint
+2021-09-20T17:49:35.5197759-03:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=pt-BR, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:35.5197959-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' from .deps.json file
+2021-09-20T17:49:35.5197979-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' from .deps.json
+2021-09-20T17:49:35.5198008-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.5198029-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\StreamJsonRpc.resources.dll'
+2021-09-20T17:49:35.5198250-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\StreamJsonRpc.resources.exe'
+2021-09-20T17:49:35.5198360-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.5198377-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-20T17:49:35.5198639-03:00:Tfm: netcoreapp3.1
+2021-09-20T17:49:35.5198655-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-20T17:49:35.5198664-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\StreamJsonRpc.resources.dll'
+2021-09-20T17:49:35.5198911-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\StreamJsonRpc.resources.exe'
+2021-09-20T17:49:35.5199246-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-20T17:49:35.5268822-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-20T17:49:35.5269042-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\StreamJsonRpc.resources.dll'
+2021-09-20T17:49:35.5269700-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\StreamJsonRpc.resources.exe'
+2021-09-20T17:49:35.5270010-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-20T17:49:35.5271441-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-20T17:49:35.5271482-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\StreamJsonRpc.resources.dll'
+2021-09-20T17:49:35.5271953-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\StreamJsonRpc.resources.exe'
+2021-09-20T17:49:35.5272310-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-20T17:49:35.5273835-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-20T17:49:35.5273900-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\StreamJsonRpc.resources.dll'
+2021-09-20T17:49:35.5274610-03:00:[AssemblyCache] Trying to resolve 'StreamJsonRpc.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\StreamJsonRpc.resources.exe'
+2021-09-20T17:49:35.5275009-03:00:[AssemblyCache] Could not resolve 'StreamJsonRpc.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-20T17:49:35.5283475-03:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=pt, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:35.5288882-03:00:Assembly resolving Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:35.5288955-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' from .deps.json file
+2021-09-20T17:49:35.5289042-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Threading' from .deps.json
+2021-09-20T17:49:35.5289129-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.5289145-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll'
+2021-09-20T17:49:35.5289375-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Threading.exe'
+2021-09-20T17:49:35.5289568-03:00:[AssemblyCache] Could not resolve 'Microsoft.VisualStudio.Threading' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:35.5289593-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-20T17:49:35.5289742-03:00:Tfm: netcoreapp3.1
+2021-09-20T17:49:35.5289768-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-20T17:49:35.5289827-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.Threading' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll'
+2021-09-20T17:49:35.5290033-03:00:[AssemblyCache] Found file 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll' for assembly 'Microsoft.VisualStudio.Threading'
+2021-09-20T17:49:35.5295049-03:00:[AssemblyCache] Resolved 'Microsoft.VisualStudio.Threading' to D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll
+2021-09-20T17:49:35.7582841-03:00:Remote executor port received: 32770
+2021-09-20T17:49:35.7585817-03:00:Creating executor TCP client on port 32770
+2021-09-20T17:49:35.7589520-03:00:Created executor TCP client on port 32770
+2021-09-20T17:49:35.7589574-03:00:Connecting to remote executor TCP server
+2021-09-20T17:49:35.7597608-03:00:Connected remote executor TCP server
+2021-09-20T17:49:35.7598905-03:00:trying to connect to Out of Process Executor the 1 attempt
+2021-09-20T17:49:35.7598974-03:00:Connection to Out of Process Executor established in the 1 attempt
+2021-09-20T17:49:35.8969288-03:00:2021-09-20T17:49:35.8959220-03:00:OutOfProcessTestAssemblyExecutor: initialized for D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll on test thread #0
+2021-09-20T17:49:35.9021420-03:00:Endpoint 8564 started
+2021-09-20T17:49:35.9210158-03:00:2021-09-20T17:49:35.9206216-03:00:OutOfProcessTestAssemblyExecutor: running tests...
+2021-09-20T17:49:36.0365717-03:00:2021-09-20T17:49:36.0361534-03:00:Assembly resolving TechTalk.SpecFlow, Version=3.9.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2021-09-20T17:49:36.0395562-03:00:2021-09-20T17:49:36.0391301-03:00:[AssemblyCache] Trying to resolve 'TechTalk.SpecFlow' from .deps.json file
+2021-09-20T17:49:36.0434205-03:00:2021-09-20T17:49:36.0430082-03:00:[AssemblyCache] Resolved 'TechTalk.SpecFlow' to 'C:\Users\Marco Lopes\.nuget\packages\specflow\3.9.8\lib\netstandard2.0\TechTalk.SpecFlow.dll'
+2021-09-20T17:49:36.1491408-03:00:2021-09-20T17:49:36.1487908-03:00:Thread#0:T:-> Loading plugin D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll
+2021-09-20T17:49:36.1507201-03:00:2021-09-20T17:49:36.1504029-03:00:Assembly resolving Microsoft.Extensions.DependencyModel, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-09-20T17:49:36.1513253-03:00:2021-09-20T17:49:36.1509117-03:00:[AssemblyCache] Trying to resolve 'Microsoft.Extensions.DependencyModel' from .deps.json file
+2021-09-20T17:49:36.1527499-03:00:2021-09-20T17:49:36.1522023-03:00:[AssemblyCache] Resolved 'Microsoft.Extensions.DependencyModel' to 'C:\Users\Marco Lopes\.nuget\packages\microsoft.extensions.dependencymodel\1.0.3\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll'
+2021-09-20T17:49:36.1931231-03:00:2021-09-20T17:49:36.1926584-03:00:Assembly resolving Microsoft.DotNet.PlatformAbstractions, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2021-09-20T17:49:36.1937439-03:00:2021-09-20T17:49:36.1936066-03:00:[AssemblyCache] Trying to resolve 'Microsoft.DotNet.PlatformAbstractions' from .deps.json file
+2021-09-20T17:49:36.1943436-03:00:2021-09-20T17:49:36.1941269-03:00:[AssemblyCache] Resolved 'Microsoft.DotNet.PlatformAbstractions' to 'C:\Users\Marco Lopes\.nuget\packages\microsoft.dotnet.platformabstractions\1.0.3\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll'
+2021-09-20T17:49:36.2001535-03:00:2021-09-20T17:49:36.1998443-03:00:Thread#0:T:-> Missing [assembly:RuntimePlugin] attribute in SpecFlowToDoWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null. Please check https://go.specflow.org/doc-plugins for details.
+2021-09-20T17:49:36.2004806-03:00:2021-09-20T17:49:36.2003457-03:00:Thread#0:T:-> Loading plugin D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll
+2021-09-20T17:49:36.2020640-03:00:2021-09-20T17:49:36.2018181-03:00:Assembly resolving LivingDoc.Dtos, Version=3.9.0.0, Culture=neutral, PublicKeyToken=null
+2021-09-20T17:49:36.2024598-03:00:2021-09-20T17:49:36.2022937-03:00:[AssemblyCache] Trying to resolve 'LivingDoc.Dtos' from .deps.json file
+2021-09-20T17:49:36.2030104-03:00:2021-09-20T17:49:36.2028449-03:00:[AssemblyCache] Resolved 'LivingDoc.Dtos' to 'C:\Users\Marco Lopes\.nuget\packages\specflow.plus.livingdocplugin\3.9.5\lib\netstandard2.0\LivingDoc.Dtos.dll'
+2021-09-20T17:49:36.2051584-03:00:2021-09-20T17:49:36.2049308-03:00:Thread#0:T:-> Loading plugin D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecRun.Runtime.SpecFlowPlugin.dll
+2021-09-20T17:49:36.2139213-03:00:2021-09-20T17:49:36.2134824-03:00:Thread#0:T:-> Using default config
+2021-09-20T17:49:36.2239113-03:00:2021-09-20T17:49:36.2234654-03:00:Assembly resolving Cucumber.Messages, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b10c5988214f940c
+2021-09-20T17:49:36.2243741-03:00:2021-09-20T17:49:36.2242006-03:00:[AssemblyCache] Trying to resolve 'Cucumber.Messages' from .deps.json file
+2021-09-20T17:49:36.2247226-03:00:2021-09-20T17:49:36.2246008-03:00:[AssemblyCache] Resolved 'Cucumber.Messages' to 'C:\Users\Marco Lopes\.nuget\packages\cucumber.messages\6.0.1\lib\netstandard2.0\Cucumber.Messages.dll'
+2021-09-20T17:49:36.2256631-03:00:2021-09-20T17:49:36.2255577-03:00:Assembly resolving Google.Protobuf, Version=3.7.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604
+2021-09-20T17:49:36.2258296-03:00:2021-09-20T17:49:36.2257439-03:00:[AssemblyCache] Trying to resolve 'Google.Protobuf' from .deps.json file
+2021-09-20T17:49:36.2260768-03:00:2021-09-20T17:49:36.2259886-03:00:[AssemblyCache] Resolved 'Google.Protobuf' to 'C:\Users\Marco Lopes\.nuget\packages\google.protobuf\3.7.0\lib\netstandard1.0\Google.Protobuf.dll'
+2021-09-20T17:49:36.2303384-03:00:2021-09-20T17:49:36.2300122-03:00:Assembly resolving Microsoft.VisualStudio.TestPlatform.ObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:36.2307417-03:00:2021-09-20T17:49:36.2305466-03:00:[AssemblyCache] Trying to resolve 'Microsoft.VisualStudio.TestPlatform.ObjectModel' from .deps.json file
+2021-09-20T17:49:36.2312650-03:00:2021-09-20T17:49:36.2311176-03:00:[AssemblyCache] Resolved 'Microsoft.VisualStudio.TestPlatform.ObjectModel' to 'C:\Users\Marco Lopes\.nuget\packages\microsoft.testplatform.objectmodel\16.5.0\lib\netstandard2.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll'
+2021-09-20T17:49:36.2653629-03:00:2021-09-20T17:49:36.2649760-03:00:Assembly resolving SpecFlow.Internal.Json, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2021-09-20T17:49:36.2657453-03:00:2021-09-20T17:49:36.2655839-03:00:[AssemblyCache] Trying to resolve 'SpecFlow.Internal.Json' from .deps.json file
+2021-09-20T17:49:36.2661654-03:00:2021-09-20T17:49:36.2660427-03:00:[AssemblyCache] Resolved 'SpecFlow.Internal.Json' to 'C:\Users\Marco Lopes\.nuget\packages\specflow.internal.json\1.0.8\lib\netstandard2.0\SpecFlow.Internal.Json.dll'
+2021-09-20T17:49:36.3375215-03:00:Thread#0: Test #4/0 is started on thread #0
+2021-09-20T17:49:36.3558998-03:00:2021-09-20T17:49:36.3553923-03:00:Thread#0:B:Given the first number is 50
+2021-09-20T17:49:36.4045001-03:00:2021-09-20T17:49:36.4033557-03:00:Thread#0:T:pending: CalculatorStepDefinitions.GivenTheFirstNumberIs(50)
+2021-09-20T17:49:36.4081493-03:00:2021-09-20T17:49:36.4077672-03:00:Thread#0:B:And the second number is 70
+2021-09-20T17:49:36.4096481-03:00:2021-09-20T17:49:36.4093960-03:00:Thread#0:T:skipped because of previous errors
+2021-09-20T17:49:36.4122837-03:00:2021-09-20T17:49:36.4120059-03:00:Thread#0:B:When the two numbers are added
+2021-09-20T17:49:36.4126607-03:00:2021-09-20T17:49:36.4125478-03:00:Thread#0:T:skipped because of previous errors
+2021-09-20T17:49:36.4130192-03:00:2021-09-20T17:49:36.4129222-03:00:Thread#0:B:Then the result should be 120
+2021-09-20T17:49:36.4132430-03:00:2021-09-20T17:49:36.4131375-03:00:Thread#0:T:skipped because of previous errors
+2021-09-20T17:49:36.4198466-03:00:2021-09-20T17:49:36.4193330-03:00:Thread#0:T:Pending: One or more step definitions are not implemented yet.
+2021-09-20T17:49:36.4202632-03:00:2021-09-20T17:49:36.4200556-03:00:Thread#0:T:  CalculatorStepDefinitions.GivenTheFirstNumberIs(50)
+2021-09-20T17:49:36.4282063-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-20T17:49:36.4282451-03:00:Thread#:Scheduler: testitem #6 from normal test queue 
+2021-09-20T17:49:36.4282477-03:00:Thread#0:Scheduler: considering testitem #6 for thread 0
+2021-09-20T17:49:36.4283002-03:00:Thread#0:TestItem#6:testItemMatchesCurrentTestThread:UnSpecific
+2021-09-20T17:49:36.4283057-03:00:Thread#0:TestItem#6:runsOnOneOtherThreadSpecific:False
+2021-09-20T17:49:36.4283075-03:00:Thread#0:TestItem#6:runsOnOneOtherThreadUnspecific:False
+2021-09-20T17:49:36.4283093-03:00:Thread#0:Scheduler: using testitem #6 for thread 0
+2021-09-20T17:49:36.4283210-03:00:Thread#0:Scheduler: Test #6 is scheduled for thread
+2021-09-20T17:49:36.4283282-03:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2021-09-20T17:49:36.4698434-03:00:Thread#0: Test #4/0 is finished on thread #0 as Pending within 0,1313525 seconds
+2021-09-20T17:49:36.4733631-03:00:Thread#0: Test #6/0 is started on thread #0
+2021-09-20T17:49:36.4761826-03:00:2021-09-20T17:49:36.4757903-03:00:Thread#0:B:Given the first name is objecto
+2021-09-20T17:49:36.4787441-03:00:2021-09-20T17:49:36.4779667-03:00:Assembly resolving ToDoWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2021-09-20T17:49:36.4795715-03:00:2021-09-20T17:49:36.4793148-03:00:[AssemblyCache] Trying to resolve 'ToDoWeb' from .deps.json file
+2021-09-20T17:49:36.4906876-03:00:2021-09-20T17:49:36.4900914-03:00:[DependencyContextAssemblyCache.ResolveManagedAssembly] Resolving 'ToDoWeb', found in dependency map, but unable to resolve a path in ['ToDoWeb.dll']
+2021-09-20T17:49:36.4917079-03:00:2021-09-20T17:49:36.4914591-03:00:[AssemblyCache] Could not resolve 'ToDoWeb' from .deps.json
+2021-09-20T17:49:36.4946203-03:00:2021-09-20T17:49:36.4934743-03:00:[AssemblyCache] Trying to resolve 'ToDoWeb' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:36.4987132-03:00:2021-09-20T17:49:36.4981055-03:00:[AssemblyCache] Trying to resolve 'ToDoWeb' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\ToDoWeb.dll'
+2021-09-20T17:49:36.4995057-03:00:2021-09-20T17:49:36.4990350-03:00:[AssemblyCache] Found file 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\ToDoWeb.dll' for assembly 'ToDoWeb'
+2021-09-20T17:49:36.5010535-03:00:2021-09-20T17:49:36.5003751-03:00:[AssemblyCache] Resolved 'ToDoWeb' to D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\ToDoWeb.dll
+2021-09-20T17:49:36.5056601-03:00:2021-09-20T17:49:36.5051667-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheNameIs("objecto") (0,0s)
+2021-09-20T17:49:36.5068773-03:00:2021-09-20T17:49:36.5060764-03:00:Thread#0:B:Given the description is "descrição do objeto"
+2021-09-20T17:49:36.5081414-03:00:2021-09-20T17:49:36.5078814-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheDescriptionIs(""descrição do obj...") (0,0s)
+2021-09-20T17:49:36.5084854-03:00:2021-09-20T17:49:36.5083488-03:00:Thread#0:B:Given the unique id: 9
+2021-09-20T17:49:36.5092513-03:00:2021-09-20T17:49:36.5091295-03:00:Thread#0:T:done: ToDoStepDefinition.GivenTheId(9) (0,0s)
+2021-09-20T17:49:36.5148579-03:00:2021-09-20T17:49:36.5144266-03:00:Thread#0:B:Then get then all and you have your
+2021-09-20T17:49:36.5153920-03:00:2021-09-20T17:49:36.5151132-03:00:Thread#0:B:  --- table step argument ---
+2021-09-20T17:49:36.5159140-03:00:2021-09-20T17:49:36.5155837-03:00:Thread#0:B:  | Field       | Value               |
+2021-09-20T17:49:36.5162862-03:00:2021-09-20T17:49:36.5161110-03:00:Thread#0:B:  | ToDoName    | objecto             |
+2021-09-20T17:49:36.5168654-03:00:2021-09-20T17:49:36.5166477-03:00:Thread#0:B:  | Description | descrição do objeto |
+2021-09-20T17:49:36.5171225-03:00:2021-09-20T17:49:36.5169961-03:00:Thread#0:B:  | Id          | 9                   |
+2021-09-20T17:49:36.5286308-03:00:2021-09-20T17:49:36.5281917-03:00:Assembly resolving Gherkin, Version=19.0.3.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851
+2021-09-20T17:49:36.5289535-03:00:2021-09-20T17:49:36.5288365-03:00:[AssemblyCache] Trying to resolve 'Gherkin' from .deps.json file
+2021-09-20T17:49:36.5294087-03:00:2021-09-20T17:49:36.5291934-03:00:[AssemblyCache] Resolved 'Gherkin' to 'C:\Users\Marco Lopes\.nuget\packages\gherkin\19.0.3\lib\netstandard2.0\Gherkin.dll'
+2021-09-20T17:49:36.5640172-03:00:2021-09-20T17:49:36.5636514-03:00:Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+2021-09-20T17:49:36.5643213-03:00:2021-09-20T17:49:36.5642034-03:00:Thread#0:T:        [Then(@"get then all and you have your")]
+2021-09-20T17:49:36.5645949-03:00:2021-09-20T17:49:36.5644076-03:00:Thread#0:T:        public void ThenGetThenAllAndYouHaveYour(Table table)
+2021-09-20T17:49:36.5648163-03:00:2021-09-20T17:49:36.5647014-03:00:Thread#0:T:        {
+2021-09-20T17:49:36.5650014-03:00:2021-09-20T17:49:36.5649006-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-20T17:49:36.5652782-03:00:2021-09-20T17:49:36.5650746-03:00:Thread#0:T:        }
+2021-09-20T17:49:36.5817543-03:00:2021-09-20T17:49:36.5813812-03:00:Thread#0:T:Pending: No matching step definition found for one or more steps.
+2021-09-20T17:49:36.5820774-03:00:2021-09-20T17:49:36.5819743-03:00:Thread#0:T:using System;
+2021-09-20T17:49:36.5823802-03:00:2021-09-20T17:49:36.5822211-03:00:Thread#0:T:using TechTalk.SpecFlow;
+2021-09-20T17:49:36.5825786-03:00:2021-09-20T17:49:36.5824789-03:00:Thread#0:T:namespace MyNamespace
+2021-09-20T17:49:36.5828022-03:00:2021-09-20T17:49:36.5826635-03:00:Thread#0:T:{
+2021-09-20T17:49:36.5831542-03:00:2021-09-20T17:49:36.5829754-03:00:Thread#0:T:    [Binding]
+2021-09-20T17:49:36.5834078-03:00:2021-09-20T17:49:36.5832677-03:00:Thread#0:T:    public class StepDefinitions
+2021-09-20T17:49:36.5837469-03:00:2021-09-20T17:49:36.5835237-03:00:Thread#0:T:    {
+2021-09-20T17:49:36.5840755-03:00:2021-09-20T17:49:36.5839640-03:00:Thread#0:T:        private readonly ScenarioContext _scenarioContext;
+2021-09-20T17:49:36.5842960-03:00:2021-09-20T17:49:36.5841912-03:00:Thread#0:T:        public StepDefinitions(ScenarioContext scenarioContext)
+2021-09-20T17:49:36.5845512-03:00:2021-09-20T17:49:36.5843986-03:00:Thread#0:T:        {
+2021-09-20T17:49:36.5849243-03:00:2021-09-20T17:49:36.5847110-03:00:Thread#0:T:            _scenarioContext = scenarioContext;
+2021-09-20T17:49:36.5852322-03:00:2021-09-20T17:49:36.5850800-03:00:Thread#0:T:        }
+2021-09-20T17:49:36.5854456-03:00:2021-09-20T17:49:36.5853181-03:00:Thread#0:T:        [Then(@"get then all and you have your")]
+2021-09-20T17:49:36.5856726-03:00:2021-09-20T17:49:36.5855621-03:00:Thread#0:T:        public void ThenGetThenAllAndYouHaveYour(Table table)
+2021-09-20T17:49:36.5858604-03:00:2021-09-20T17:49:36.5857532-03:00:Thread#0:T:        {
+2021-09-20T17:49:36.5860463-03:00:2021-09-20T17:49:36.5859441-03:00:Thread#0:T:            _scenarioContext.Pending();
+2021-09-20T17:49:36.5863070-03:00:2021-09-20T17:49:36.5861927-03:00:Thread#0:T:        }
+2021-09-20T17:49:36.5865390-03:00:2021-09-20T17:49:36.5864280-03:00:Thread#0:T:    }
+2021-09-20T17:49:36.5870653-03:00:2021-09-20T17:49:36.5868567-03:00:Thread#0:T:}
+2021-09-20T17:49:36.5891361-03:00:Thread#0:Scheduler: get next test for thread 0
+2021-09-20T17:49:36.5894701-03:00:Thread#:Scheduler: at the end of normal test queue
+2021-09-20T17:49:36.5894761-03:00:Thread#0:Scheduler: enumerator for thread is at end
+2021-09-20T17:49:36.5894791-03:00:Thread#0:Scheduler: No more tests for thread
+2021-09-20T17:49:36.6046322-03:00:Thread#0: Test #6/0 is finished on thread #0 as Pending within 0,1311674 seconds
+2021-09-20T17:49:36.6101969-03:00:2021-09-20T17:49:36.6099968-03:00:Got Deinitialize Signal
+2021-09-20T17:49:36.6132243-03:00:RPC Client disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Stream has been disposed
+Exception:<none>
+2021-09-20T17:49:36.6142311-03:00:RPC Server disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Reached end of stream.
+Exception:<none>
+2021-09-20T17:49:36.6151845-03:00:RPC Server disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Reached end of stream.
+Exception:<none>
+2021-09-20T17:49:36.6171364-03:00:Assembly resolving System.Diagnostics.Process.resources, Version=4.2.2.0, Culture=pt-BR, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:36.6171592-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' from .deps.json file
+2021-09-20T17:49:36.6171619-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' from .deps.json
+2021-09-20T17:49:36.6171655-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:36.6171767-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\System.Diagnostics.Process.resources.dll'
+2021-09-20T17:49:36.6171988-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\System.Diagnostics.Process.resources.exe'
+2021-09-20T17:49:36.6172138-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1'
+2021-09-20T17:49:36.6172163-03:00:TargetFramework: .NETCoreApp,Version=v3.1
+2021-09-20T17:49:36.6172304-03:00:Tfm: netcoreapp3.1
+2021-09-20T17:49:36.6172347-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-20T17:49:36.6172515-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\System.Diagnostics.Process.resources.dll'
+2021-09-20T17:49:36.6172779-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1\System.Diagnostics.Process.resources.exe'
+2021-09-20T17:49:36.6172951-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowPlusRunner\netcoreapp3.1'
+2021-09-20T17:49:36.6179340-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-20T17:49:36.6179396-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\System.Diagnostics.Process.resources.dll'
+2021-09-20T17:49:36.6179861-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15\System.Diagnostics.Process.resources.exe'
+2021-09-20T17:49:36.6180192-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\3.1.15'
+2021-09-20T17:49:36.6181355-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-20T17:49:36.6181386-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\System.Diagnostics.Process.resources.dll'
+2021-09-20T17:49:36.6181808-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15\System.Diagnostics.Process.resources.exe'
+2021-09-20T17:49:36.6182180-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.15'
+2021-09-20T17:49:36.6183477-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-20T17:49:36.6183505-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\System.Diagnostics.Process.resources.dll'
+2021-09-20T17:49:36.6183977-03:00:[AssemblyCache] Trying to resolve 'System.Diagnostics.Process.resources' to 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15\System.Diagnostics.Process.resources.exe'
+2021-09-20T17:49:36.6184233-03:00:[AssemblyCache] Could not resolve 'System.Diagnostics.Process.resources' in folder 'C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App\3.1.15'
+2021-09-20T17:49:36.6187654-03:00:Assembly resolving System.Diagnostics.Process.resources, Version=4.2.2.0, Culture=pt, PublicKeyToken=b03f5f7f11d50a3a
+2021-09-20T17:49:36.6257040-03:00:Thread#-1:Scheduler: get next test for thread -1
+2021-09-20T17:49:36.6257267-03:00:Thread#:Scheduler: at the end of normal test queue
+2021-09-20T17:49:36.6257296-03:00:Thread#-1:Scheduler: enumerator for thread is at end
+2021-09-20T17:49:36.6271267-03:00;Thread#12;Info;test run finished
+2021-09-20T17:49:36.6273092-03:00;Thread#12;Info;publishing test results
+2021-09-20T17:49:36.6275052-03:00;Thread#12;Info;Not publishing results.
+2021-09-20T17:49:36.6276570-03:00;Thread#12;Info;test results published
+2021-09-20T17:49:36.6276990-03:00;Thread#12;Info;generating reports
+2021-09-20T17:49:36.7293370-03:00;Thread#12;Info;Starting external report generation process
+2021-09-20T17:49:38.0219677-03:00;Thread#12;Info;Successfully generated reports.
+2021-09-20T17:49:38.0234179-03:00;Thread#12;Info;Successfully generated reports
+2021-09-20T17:49:38.0290677-03:00:Total: 2
+2021-09-20T17:49:38.0303359-03:00:Succeeded: 0
+2021-09-20T17:49:38.0306697-03:00:Ignored: 0
+2021-09-20T17:49:38.0308636-03:00:Pending: 2
+2021-09-20T17:49:38.0308672-03:00:Skipped: 0
+2021-09-20T17:49:38.0310616-03:00:Failed: 0
+2021-09-20T17:49:38.0365489-03:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+2021-09-20T17:49:38.0366123-03:00;VSTestExecutionThread;Info;adding Test Execution Report 'D:\Faculdade\Escobar\apinewtest\ToDoAPI\TestResults\Unnamed project__2021-09-20T174934.html'
+========== End of log file ==========

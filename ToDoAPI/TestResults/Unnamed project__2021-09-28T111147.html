@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Unnamed project Test Execution Report</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript">
+            /**
+            * jQuery.fn.sortElements
+            * --------------
+            * #author James Padolsey (http://james.padolsey.com)
+            * #version 0.11
+            * #updated 18-MAR-2010
+            * #url https://raw.github.com/jamespadolsey/jQuery-Plugins/master/sortElements/jquery.sortElements.js
+            * --------------
+            * #param Function comparator:
+            *   Exactly the same behaviour as [1,2,3].sort(comparator)
+            *   
+            * #param Function getSortable
+            *   A function that should return the element that is
+            *   to be sorted. The comparator will run on the
+            *   current collection, but you may want the actual
+            *   resulting sort to occur on a parent or another
+            *   associated element.
+            *   
+            *   E.g. $('td').sortElements(comparator, function(){
+            *      return this.parentNode; 
+            *   })
+            *   
+            *   The <td>'s parent (<tr>) will be sorted instead
+            *   of the <td> itself.
+            */
+            jQuery.fn.sortElements = (function () {
+
+                var sort = [].sort;
+
+                return function (comparator, getSortable) {
+
+                    getSortable = getSortable || function () { return this; };
+
+                    var placements = this.map(function () {
+
+                        var sortElement = getSortable.call(this),
+                parentNode = sortElement.parentNode,
+
+                        // Since the element itself will change position, we have
+                        // to have some way of storing it's original position in
+                        // the DOM. The easiest way is to have a 'flag' node:
+                nextSibling = parentNode.insertBefore(
+                    document.createTextNode(''),
+                    sortElement.nextSibling
+                );
+
+                        return function () {
+
+                            if (parentNode === this) {
+                                throw new Error(
+                        "You can't sort elements if any one is a descendant of another."
+                    );
+                            }
+
+                            // Insert before flag:
+                            parentNode.insertBefore(this, nextSibling);
+                            // Remove flag:
+                            parentNode.removeChild(nextSibling);
+
+                        };
+
+                    });
+
+                    return sort.call(this, comparator).each(function (i) {
+                        placements[i].call(getSortable.call(this));
+                    });
+
+                };
+
+            })();
+        </script>
+        <script type="text/javascript">
+            jQuery.fn.setBarSizes = (function () {
+                return function (metricName, maxBarSize, min) {
+                    var max = Math.max.apply(Math, $.makeArray($(this).map(function () { return Number($(this).attr('data-sr-' + metricName)); })));
+                    var scale = 1.0;
+                    while (max > 0.0 && max <= 10.0) {
+                        scale = scale * 10.0;
+                        max = max * 10.0;
+                    }
+                    max = (Math.ceil(max / 2) * 2) / scale;
+
+                    this.each(function () {
+                        var barAnchor = $(this).find('a');
+                        var actual = $(this).attr('data-sr-' + metricName);
+                        var newHeight = Math.max(Math.round(maxBarSize * (actual - min) / (max - min)), 2);
+                        barAnchor.css({ height: newHeight });
+                    });
+
+                    var unit = "";
+                    if (metricName.substr(metricName.length - 4, 4) === "time")
+                        unit = "s";
+
+                    $('#testview .scale-min-label').each(function () {
+                        $(this).text(min.toString() + unit);
+                    });
+                    $('#testview .scale-max-label').each(function () {
+                        $(this).text(max.toString() + unit);
+                    });
+                    var mid = max / 2;
+                    $('#testview .scale-mid-label').each(function () {
+                        $(this).text(mid.toString() + unit);
+                    });
+                };
+            })();
+
+            function getComparer(metricName, isDesc) {
+                return function (a, b) {
+                    var aNumber = Number($(a).attr('data-sr-' + metricName));
+                    var bNumber = Number($(b).attr('data-sr-' + metricName));
+                    var result = aNumber > bNumber ? 1 : (aNumber < bNumber ? -1 : 0);
+                    if (isDesc)
+                        result = -1 * result;
+
+                    if (result == 0 && metricName != "order")
+                        result = getComparer("order", false)(a, b);
+
+                    return result;
+                };
+            }
+
+            var currentSort = "";
+            function doSort(allowToggleDesc) {
+                var newSort = $("input[name='barSortOrder']:checked").val();
+                if (allowToggleDesc && currentSort == newSort) {
+                    $('#barSortDesc').click();
+                    doSort(false);
+                    return;
+                }
+                currentSort = newSort;
+                $('#testview td.testview-item').sortElements(getComparer(newSort, $('#barSortDesc').is(':checked')));
+            }
+
+
+            function doSetHeights(allowSort) {
+                var selectedMetric = $("input[name='barHeight']:checked").val();
+                $('#testview td.testview-item').setBarSizes(selectedMetric, 60, 0.0);
+
+                if (allowSort && currentSort != selectedMetric) {
+                    var $radios = $("input[name='barSortOrder']");
+                    $radios.filter('[value=' + selectedMetric + ']').attr('checked', true);
+                    $("#barSortDesc").attr("checked", [true]);
+                    doSort(false);
+                }
+            }
+
+            $(document).ready(function () {
+                $("input[name='barSortOrder']").click(function () { doSort(true); return true; });
+                $("input[name='barSortDesc']").change(function () { doSort(false); });
+                $("input[name='barHeight']").change(function () { doSetHeights(true); });
+
+                doSort(false);
+                doSetHeights(false);
+
+                $("div.scrollable").css({ 'overflow': 'auto' });
+            });
+        </script>
+
+        <style type="text/css">
+            body 
+            {
+                color: #000000;
+                font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif;
+                line-height: 130%;
+            }
+            h1 {
+                font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+                font-size: 170%;
+                font-weight: bold;
+            }            
+            h2 {
+                font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+                font-size: 130%;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }            
+            h3 {
+                font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+                font-size: 120%;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }            
+            a.bar
+            {
+                text-decoration: none;
+                display: block;
+                line-height: 1px;
+            }
+            .description
+            {
+                font-style: italic;
+            }
+            .log 
+            {
+                width: 600px;
+                white-space: pre-wrap;
+                display: block;
+                margin: 0px;
+            }
+            .errorMessage 
+            {
+                width: 600px;
+                color: Red;
+                font-weight: bold;
+            }
+            .stackTrace 
+            {
+                width: 600px;
+                white-space: pre-wrap;
+                font-style: italic;
+                color: Red;
+                display: block;
+            }
+            table.testEvents
+            {
+                border: solid 1px #e8eef4;
+                border-collapse: collapse;
+            }
+            table.testEvents td
+            {
+                vertical-align: top;
+                padding: 5px;
+                border: solid 1px #e8eef4;
+            }
+            table.testEvents th
+            {
+                padding: 6px 5px;
+                text-align: left;
+                background-color: #e8eef4;
+                border: solid 1px #e8eef4;                
+            }
+            .comment
+            {
+                font-style: italic;
+                font-size: smaller;
+            }
+            .startupBar
+            {
+                background-color: #EEEEEE;
+                cursor: default;
+            }
+            
+            .colorSucceeded
+            {
+                background-color: #90ED7B;
+            }
+            .colorIgnored
+            {
+                background-color: #FFFF85;
+            }
+            .colorPending
+            {
+                background-color: #D47BED;
+            }
+            .colorNothingToRun
+            {
+                background-color: #CCCCFF;
+            }
+            .colorSkipped
+            {
+                background-color: #CCCCFF;
+            }
+            .colorInconclusive
+            {
+                background-color: #7BEDED;
+            }
+            .colorCleanupFailed
+            {
+                background-color: #FFCCCC;
+            }
+            .colorRandomlyFailed
+            {
+                background-color: #EDB07B;
+            }
+            .colorFailed
+            {
+                background-color: #ED5F5F;
+            }
+            .colorInitializationFailed
+            {
+                background-color: #FF0000;
+            }
+            .colorFrameworkError
+            {
+                background-color: #FF0000;
+            }
+            ul.subNodeLinks
+            {
+                padding-left: 20px;
+                margin: 0px;
+            }
+            ul.subNodeLinks li
+            {
+                list-style: none;
+            }
+            
+            /* views general */
+            div.scrollable
+            {
+                /*overflow: auto; - thsi has to be set from js, because of an IE9 bug */
+            }
+            div.viewbox
+            {
+                position: relative;
+                border: 3px solid #e8eef4;
+            }
+            div.viewbox table
+            {
+                border: 0px;
+            }
+                        
+            /* testview */
+            #testview
+            {
+                padding-top: 23px;
+            }
+            
+            table.testview-items td
+            {
+                vertical-align: bottom;
+                padding: 0px 1px 0px 1px;
+            }
+            td.right-padding, td.left-padding
+            {
+                width: 25px;
+                min-width: 25px;
+            }
+            table.testview-items a.bar
+            {
+                width: 5px;
+            }
+            table.testview-items tr.testview-items-row
+            {
+                height: 60px;
+            }
+            
+            /* scale */
+            table.vertical-scale 
+            {
+                position: absolute;
+                top: 23px;
+                left: 0px;
+                width: 100%;
+                z-index: -100;
+            }
+            table.vertical-scale td, tr.horizontal-scale td
+            {
+                font-size: 60%;
+                line-height: normal;
+            }
+            table.vertical-scale tr.scale-max, table.vertical-scale tr.scale-mid 
+            {
+                height: 30px;
+            }
+            tr.horizontal-scale, table.vertical-scale tr.scale-min 
+            {
+                height: 12px;
+            }
+            
+            td.scale-max-label, td.scale-mid-label, td.scale-min-label
+            {
+                border-top: solid 1px #E6E6E6;
+                text-align: left;
+                vertical-align: top;
+            }
+            td.scale-10-label
+            {
+                border-left: solid 1px #E6E6E6;
+                text-align: left;
+                vertical-align: bottom;
+                padding-left: 1px;
+            }
+            tr.scale-mid td, tr.scale-min td, tr.scale-max td
+            {
+                border-top: solid 1px #E6E6E6;
+            }
+           
+            
+            /* bar-control */
+            #bar-control
+            {
+                font-size: 60%;
+                line-height: normal;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+            #bar-control label
+            {
+                font-weight: bold;
+                vertical-align: middle;
+            }
+            #bar-control .option
+            {
+                vertical-align: middle;
+                text-transform: lowercase;
+            }
+            #bar-control input[type="checkbox"]
+            {
+                padding: 0 2px 0 3px;
+            }
+            #bar-control input
+            {
+                vertical-align: top;
+                height: 12px;
+                margin: 0px;
+                padding: 0px;
+            }
+            #bar-control div
+            {
+                float: right;
+                margin: 3px 5px 3px 5px;
+            }
+
+            /* timeline view */
+            #timelineview
+            {
+                padding-top: 5px;
+            }
+            table.timelineview a
+            {
+                height: 20px;
+            }
+            table.timelineview td
+            {
+                vertical-align: bottom;
+                padding: 0px 1px 0px 0px;
+                border: 0px;
+            }
+            tr.thread-items-row
+            {
+                height: 25px;
+            }
+            tr.thread-items-row td
+            {
+                vertical-align: bottom;
+            }
+            td.thread-label
+            {
+                padding: 0px 6px 0px 6px;
+                text-align: right;
+                line-height: 18px;
+                vertical-align: bottom;
+            }
+            th.thread-label
+            {
+                padding: 3px 6px 0px 6px;
+                line-height: 18px;
+                text-align: left;
+                vertical-align: bottom;
+            }
+        </style>
+	</head>
+	<body>
+        <h1>Unnamed project Test Execution Report</h1>
+        
+    <ul>
+        <li>Project: Unnamed project</li>
+        <li>Configuration: </li>
+        <li>Test Assemblies: D:\Faculdade\Escobar\apinewtest\SpecFlowToDoWeb\bin\Debug\netcoreapp3.1\SpecFlowToDoWeb.dll</li>
+        <li>Start Time: 28/09/2021 11:11:47</li>
+        <li>Duration: 00:00:01.9817053</li>
+        <li>Test Threads: 1</li>
+    </ul>
+
+
+        <h2>Result: 4 pending tests (4 succeeded)</h2>
+        <table class="testEvents">
+                <tr>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+    </tr>
+
+                <td>
+            50%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 99px;" 
+           title="4 succeeded" 
+                   ></a>
+    </td>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 99px;" 
+           title="4 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>8</td>
+    <td>4</td>
+    <td>0</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+
+        </table>
+        
+        <h2>Test Timeline Summary</h2>
+
+        <div id="timelineview" class="viewbox">
+            <div class="scrollable">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th class="thread-label" colspan="2">thread</th>
+                    </tr>
+                        <tr class="thread-items-row">
+                            <td class="thread-label" title="Machine: JUNIOR-DESKTOP">#0</td>
+                            <td colspan="1">
+                                <table class="timelineview" cellpadding="0" cellspacing="0">
+                                    <tr>
+
+                                            <td>
+        <a
+            class="bar startupBar" 
+            style="width: 3px;" 
+                title="test thread startup" 
+        >&nbsp;</a>
+    </td>
+
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 40px;" 
+                title="create a ToDo object in memory (or database) (in ToDoController)" 
+                href="#t-886672051.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 3px;" 
+                title="Add an object without a valid name (in ToDoControllerCreateInvalidName)" 
+                href="#t-812604507.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 3px;" 
+                title="delete a ToDo Object (in ToDoControllerDelete)" 
+                href="#t-626433000.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorPending" 
+            style="width: 3px;" 
+                title="Add two numbers (in ToDoControllerDeleteInvalidId)" 
+                href="#t-1737764216.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorPending" 
+            style="width: 3px;" 
+                title="Add two numbers (in ToDoControllerRead)" 
+                href="#t1471324923.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorPending" 
+            style="width: 3px;" 
+                title="Add two numbers (in ToDoControllerUpdate)" 
+                href="#t-1398653120.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorPending" 
+            style="width: 3px;" 
+                title="Add two numbers (in ToDoControllerUpdateInvalidId)" 
+                href="#t1737896916.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 3px;" 
+                title="Create an object ToDo (in ToDoWeb)" 
+                href="#t-2079871212.0"
+        >&nbsp;</a>
+    </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="horizontal-scale">
+                        <td>&nbsp;</td>
+                        <td class="scale-10-label">0s</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        
+    <h2>Test Result View</h2>
+    <div id="testview" class="viewbox">
+        <div id="bar-control">
+            <div id="bar-control-sort">
+                <label>sort by:</label>
+                <span class="option"><input type="radio" name="barSortOrder" value="exectime" />Time</span>
+                <span class="option"><input type="radio" name="barSortOrder" value="acttime" />Act Time</span>
+                <span class="option"><input type="radio" name="barSortOrder" value="order" />Execution</span>
+                <span class="option"><input type="radio" name="barSortOrder" value="rescode" checked="checked" />Result</span>
+                <span class="option"><input type="checkbox" name="barSortDesc" id="barSortDesc" checked="checked" />desc</span>
+            </div>
+            <div id="bar-control-heights">
+                <label>heights:</label>
+                <span class="option"><input type="radio" checked="checked" name="barHeight" value="exectime" />Time</span>
+                <span class="option"><input type="radio" name="barHeight" value="acttime" />Act Time</span>
+            </div>
+        </div>
+        <table class="vertical-scale" cellpadding="0" cellspacing="0">
+            <tr class="scale-max">
+                <td class="left-padding scale-max-label">&nbsp;</td>
+                <td colspan="8">&nbsp;</td>
+                <td class="right-padding">&nbsp;</td>
+            </tr>
+            <tr class="scale-mid">
+                <td class="left-padding scale-mid-label">&nbsp;</td>
+                <td colspan="8">&nbsp;</td>
+                <td class="right-padding">&nbsp;</td>
+            </tr>
+            <tr class="scale-min">
+                <td class="left-padding scale-min-label">&nbsp;</td>
+                <td colspan="8">&nbsp;</td>
+                <td class="right-padding">&nbsp;</td>
+            </tr>
+        </table>
+        <div class="scrollable">
+            <table class="testview-items" cellpadding="0" cellspacing="0">
+                <tr class="testview-items-row">
+                    <td class="left-padding">&nbsp;</td>
+    <td class="testview-item" 
+        data-sr-exectime="0.7030782" data-sr-rescode="110" data-sr-order="0" data-sr-acttime="0.0">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 60px;"
+            title="create a ToDo object in memory (or database) (in ToDoController)"
+            href="#t-886672051.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.0267488" data-sr-rescode="110" data-sr-order="1" data-sr-acttime="0.0">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 2px;"
+            title="Add an object without a valid name (in ToDoControllerCreateInvalidName)"
+            href="#t-812604507.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.0343549" data-sr-rescode="110" data-sr-order="2" data-sr-acttime="0.0">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 3px;"
+            title="delete a ToDo Object (in ToDoControllerDelete)"
+            href="#t-626433000.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.0089127" data-sr-rescode="110" data-sr-order="7" data-sr-acttime="0.0">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 2px;"
+            title="Create an object ToDo (in ToDoWeb)"
+            href="#t-2079871212.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.1099835" data-sr-rescode="310" data-sr-order="3" data-sr-acttime="0.009">
+        <a
+            class="bar colorPending" 
+            style="height: 9px;"
+            title="Add two numbers (in ToDoControllerDeleteInvalidId)"
+            href="#t-1737764216.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.0646747" data-sr-rescode="310" data-sr-order="4" data-sr-acttime="0.005">
+        <a
+            class="bar colorPending" 
+            style="height: 6px;"
+            title="Add two numbers (in ToDoControllerRead)"
+            href="#t1471324923.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.0719088" data-sr-rescode="310" data-sr-order="5" data-sr-acttime="0.005">
+        <a
+            class="bar colorPending" 
+            style="height: 6px;"
+            title="Add two numbers (in ToDoControllerUpdate)"
+            href="#t-1398653120.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="0.0628217" data-sr-rescode="310" data-sr-order="6" data-sr-acttime="0.006">
+        <a
+            class="bar colorPending" 
+            style="height: 5px;"
+            title="Add two numbers (in ToDoControllerUpdateInvalidId)"
+            href="#t1737896916.0">&nbsp;</a>
+    </td>
+                    <td class="right-padding">&nbsp;</td>
+                </tr>
+                <tr class="horizontal-scale">
+                    <td class="left-padding">&nbsp;</td>
+                    <td colspan="10">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+        
+        
+    <h2>Feature Summary</h2>
+    <table class="testEvents">
+            <tr>
+            <th>Feature</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+
+            <tr>
+                <td><a href="#f-583415762">ToDoController</a></td>
+                    <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.7030782</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f1056014734">ToDoControllerCreateInvalidName</a></td>
+                    <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0267488</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f124805777">ToDoControllerDelete</a></td>
+                    <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0343549</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f-286534619">ToDoControllerDeleteInvalidId</a></td>
+                    <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.1099835</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f556966998">ToDoControllerRead</a></td>
+                    <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0646747</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f-635291155">ToDoControllerUpdate</a></td>
+                    <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0719088</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f286668153">ToDoControllerUpdateInvalidId</a></td>
+                    <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0628217</td>
+
+            </tr>
+            <tr>
+                <td><a href="#f-955523104">ToDoWeb</a></td>
+                    <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0089127</td>
+
+            </tr>
+    </table>
+
+
+        <a name="error_summary" />
+        <h2>Error Summary</h2>
+        <table class="testEvents">
+                <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+    </tr>
+
+        </table>
+
+        <h2>Scenario Summary</h2>
+            <a name="f-583415762" />
+            <h3>Feature: ToDoController</h3>
+                <div class="description"><pre>	This feature tests controller create</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t-886672051.0">Scenario: create a ToDo object in memory (or database)</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.7030782</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f1056014734" />
+            <h3>Feature: ToDoControllerCreateInvalidName</h3>
+                <div class="description"><pre>	This feature tests the creation of an object within an invalid name</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t-812604507.0">Scenario: Add an object without a valid name</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0267488</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f124805777" />
+            <h3>Feature: ToDoControllerDelete</h3>
+                <div class="description"><pre>	Feature that tests ToDo tests delete</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t-626433000.0">Scenario: delete a ToDo Object</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0343549</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f-286534619" />
+            <h3>Feature: ToDoControllerDeleteInvalidId</h3>
+                <div class="description"><pre>	Simple calculator for adding two numbers</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t-1737764216.0">Scenario: Add two numbers</a>
+
+                        </td>
+                        
+                            <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.1099835</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f556966998" />
+            <h3>Feature: ToDoControllerRead</h3>
+                <div class="description"><pre>	Simple calculator for adding two numbers</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t1471324923.0">Scenario: Add two numbers</a>
+
+                        </td>
+                        
+                            <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0646747</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f-635291155" />
+            <h3>Feature: ToDoControllerUpdate</h3>
+                <div class="description"><pre>	Simple calculator for adding two numbers</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t-1398653120.0">Scenario: Add two numbers</a>
+
+                        </td>
+                        
+                            <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0719088</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f286668153" />
+            <h3>Feature: ToDoControllerUpdateInvalidId</h3>
+                <div class="description"><pre>	Simple calculator for adding two numbers</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t1737896916.0">Scenario: Add two numbers</a>
+
+                        </td>
+                        
+                            <td>
+            0%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorPending" 
+           style="width: 199px;" 
+           title="1 pending" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0628217</td>
+
+                        
+                    </tr>
+            </table>
+            <a name="f-955523104" />
+            <h3>Feature: ToDoWeb</h3>
+                <div class="description"><pre>	This feature creates a ToDo Object</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t-2079871212.0">Scenario: Create an object ToDo</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+            <table class="timelineview" cellpadding="0" cellspacing="0">
+        <tr>
+    <td>
+        <a class="bar colorSucceeded" 
+           style="width: 199px;" 
+           title="1 succeeded" 
+                   ></a>
+    </td>
+        </tr>
+    </table>
+
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:00.0089127</td>
+
+                        
+                    </tr>
+            </table>
+
+        <h2>Execution Details</h2>
+            <a name="t-886672051.0" />
+            <h3>Scenario: create a ToDo object in memory (or database) (in SpecFlowToDoWeb, ToDoController)</h3>
+                <div class="description">
+                    tags: ToDoControllerCreate
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 28/09/2021 11:11:48</li>
+                <li>Execution time (sec): 0,7030782</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given a user has entered information about ToDo novo nome</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - create a ToDo object in memory (or database)] -->
+                            <pre class="log">done: ToDoControllerStepDefinition.GivenAUserHasEnteredInformationAboutAToDo(&quot;novo nome&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.025s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given it gives more information about ToDo descriptionaaa</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - create a ToDo object in memory (or database)] -->
+                            <pre class="log">done: ToDoControllerStepDefinition.GivenMoreInformation(&quot;descriptionaaa&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then that ToDo should be stored in the system</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - create a ToDo object in memory (or database)] -->
+                            <pre class="log">OK
+done: ToDoControllerStepDefinition.ThenThatToDoShouldBeStoredInTheSystem() (0,5s)</pre>
+                        </td>
+                        <td>Succeeded in 0.478s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the response should be OK</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - create a ToDo object in memory (or database)] -->
+                            <pre class="log">done: ToDoControllerStepDefinition.GivenModelStateIsCorrect(&quot;OK&quot;) (0,2s)</pre>
+                        </td>
+                        <td>Succeeded in 0.159s</td>
+                    </tr>
+            </table>
+            <a name="t-812604507.0" />
+            <h3>Scenario: Add an object without a valid name (in SpecFlowToDoWeb, ToDoControllerCreateInvalidName)</h3>
+                <div class="description">
+                    tags: ToDoControllerCreateInvalidName
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 28/09/2021 11:11:48</li>
+                <li>Execution time (sec): 0,0267488</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the prop ToDo Id 8</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add an object without a valid name] -->
+                            <pre class="log">done: ToDoControllerCreateInvalidNameStepsDefinition.GivenThePropToDoId(8) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.003s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the prop Description &quot;Nova descri&#231;&#227;o&quot;</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add an object without a valid name] -->
+                            <pre class="log">done: ToDoControllerCreateInvalidNameStepsDefinition.ThenThePropDescription(&quot;Nova descri&#231;&#227;o&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the system try to save the object</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add an object without a valid name] -->
+                            <pre class="log">done: ToDoControllerCreateInvalidNameStepsDefinition.ThenTheSystemTryToStoredTheObjectInTheSystem() (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.019s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the error response should be Bad Request</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add an object without a valid name] -->
+                            <pre class="log">done: ToDoControllerCreateInvalidNameStepsDefinition.ThenTheErrorResponseShouldBeBadRequest(&quot;Bad Request&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+            </table>
+            <a name="t-626433000.0" />
+            <h3>Scenario: delete a ToDo Object (in SpecFlowToDoWeb, ToDoControllerDelete)</h3>
+                <div class="description">
+                    tags: ToDoControllerDelete
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 28/09/2021 11:11:48</li>
+                <li>Execution time (sec): 0,0343549</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given a creation of an object ToDo
+  --- table step argument ---
+  | Field        | Value                    |
+  | Id           | 20                       |
+  | ToDoName     | objeto ToDo              |
+  | Description  | descri&#231;&#227;o do objeto ToDo |
+  | CreationDate | 2021/09/20               |</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - delete a ToDo Object] -->
+                            <pre class="log">done: ToDoControllerDeleteSteps.GivenACreationOfAnObjectToDo(&lt;table&gt;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.025s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And when user send a delete requisition within an id 20</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - delete a ToDo Object] -->
+                            <pre class="log">done: ToDoControllerDeleteSteps.GivenWhenUserSendADeleteRequisitionWithinAnId(20) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the system execute the requisition</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - delete a ToDo Object] -->
+                            <pre class="log">done: ToDoControllerDeleteSteps.ThenTheSystemExecuteTheRequisition() (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.005s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the system should respond with OK</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - delete a ToDo Object] -->
+                            <pre class="log">done: ToDoControllerDeleteSteps.ThenTheSystemShouldRespond(&quot;OK&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+            </table>
+            <a name="t-1737764216.0" />
+            <h3>Scenario: Add two numbers (in SpecFlowToDoWeb, ToDoControllerDeleteInvalidId)</h3>
+                <div class="description">
+                    tags: mytag
+                </div>
+            <ul>
+                <li>Status: Pending</li>
+                <li>Start time: 28/09/2021 11:11:48</li>
+                <li>Execution time (sec): 0,1099835</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the first number is 50</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.029s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And the second number is 70</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.006s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When the two numbers are added</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.009s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 120</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+Pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        private readonly ScenarioContext _scenarioContext;
+
+        public StepDefinitions(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+    }
+}</pre>
+                        </td>
+                        <td>Pending in 0.064s</td>
+                    </tr>
+            </table>
+            <a name="t1471324923.0" />
+            <h3>Scenario: Add two numbers (in SpecFlowToDoWeb, ToDoControllerRead)</h3>
+                <div class="description">
+                    tags: mytag
+                </div>
+            <ul>
+                <li>Status: Pending</li>
+                <li>Start time: 28/09/2021 11:11:49</li>
+                <li>Execution time (sec): 0,0646747</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the first number is 50</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.009s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And the second number is 70</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.005s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When the two numbers are added</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.005s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 120</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+Pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        private readonly ScenarioContext _scenarioContext;
+
+        public StepDefinitions(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+    }
+}</pre>
+                        </td>
+                        <td>Pending in 0.044s</td>
+                    </tr>
+            </table>
+            <a name="t-1398653120.0" />
+            <h3>Scenario: Add two numbers (in SpecFlowToDoWeb, ToDoControllerUpdate)</h3>
+                <div class="description">
+                    tags: mytag
+                </div>
+            <ul>
+                <li>Status: Pending</li>
+                <li>Start time: 28/09/2021 11:11:49</li>
+                <li>Execution time (sec): 0,0719088</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the first number is 50</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.006s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And the second number is 70</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.005s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When the two numbers are added</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.005s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 120</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+Pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        private readonly ScenarioContext _scenarioContext;
+
+        public StepDefinitions(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+    }
+}</pre>
+                        </td>
+                        <td>Pending in 0.053s</td>
+                    </tr>
+            </table>
+            <a name="t1737896916.0" />
+            <h3>Scenario: Add two numbers (in SpecFlowToDoWeb, ToDoControllerUpdateInvalidId)</h3>
+                <div class="description">
+                    tags: mytag
+                </div>
+            <ul>
+                <li>Status: Pending</li>
+                <li>Start time: 28/09/2021 11:11:49</li>
+                <li>Execution time (sec): 0,0628217</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the first number is 50</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.006s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And the second number is 70</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.005s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When the two numbers are added</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }</pre>
+                        </td>
+                        <td>Pending in 0.006s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 120</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Add two numbers] -->
+                            <pre class="log">No matching step definition found for the step. Use the following code to create one:
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+Pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        private readonly ScenarioContext _scenarioContext;
+
+        public StepDefinitions(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+        }
+        [Given(@&quot;the first number is (.*)&quot;)]
+        public void GivenTheFirstNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Given(@&quot;the second number is (.*)&quot;)]
+        public void GivenTheSecondNumberIs(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [When(@&quot;the two numbers are added&quot;)]
+        public void WhenTheTwoNumbersAreAdded()
+        {
+            _scenarioContext.Pending();
+        }
+        
+        [Then(@&quot;the result should be (.*)&quot;)]
+        public void ThenTheResultShouldBe(int p0)
+        {
+            _scenarioContext.Pending();
+        }
+    }
+}</pre>
+                        </td>
+                        <td>Pending in 0.044s</td>
+                    </tr>
+            </table>
+            <a name="t-2079871212.0" />
+            <h3>Scenario: Create an object ToDo (in SpecFlowToDoWeb, ToDoWeb)</h3>
+                <div class="description">
+                    tags: TesteDaModelToDo
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 28/09/2021 11:11:49</li>
+                <li>Execution time (sec): 0,0089127</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the first name is objeto ToDo</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Create an object ToDo] -->
+                            <pre class="log">done: ToDoStepDefinition.GivenTheNameIs(&quot;objeto ToDo&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.002s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the description is descri&#231;&#227;o do objeto ToDo</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Create an object ToDo] -->
+                            <pre class="log">done: ToDoStepDefinition.GivenTheDescriptionIs(&quot;descri&#231;&#227;o do obje...&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the unique id: 7</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Create an object ToDo] -->
+                            <pre class="log">done: ToDoStepDefinition.GivenTheId(7) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given the object creation date 2021/09/20</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Create an object ToDo] -->
+                            <pre class="log">done: ToDoStepDefinition.GivenTheDate(&quot;2021/09/20&quot;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.001s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then get them all and you have your ToDo object
+  --- table step argument ---
+  | Field        | Value                    |
+  | Id           | 7                        |
+  | ToDoName     | objeto ToDo              |
+  | Description  | descri&#231;&#227;o do objeto ToDo |
+  | CreationDate | 2021/09/20               |</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Create an object ToDo] -->
+                            <pre class="log">done: ToDoStepDefinition.ThenGatherThemAll(&lt;table&gt;) (0,0s)</pre>
+                        </td>
+                        <td>Succeeded in 0.002s</td>
+                    </tr>
+            </table>
+	</body>
+</html>
